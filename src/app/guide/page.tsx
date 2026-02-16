@@ -33,6 +33,14 @@ export default function GuidePage() {
           till kvalificerade leads – utan att öka sin annonsbudget.
         </p>
 
+        <div className="mx-auto mt-10 max-w-[260px]">
+          <img
+            src="/guide-cover.png"
+            alt="7 beprövade sätt att öka konverteringen och vinna fler affärer"
+            className="w-full rounded-sm shadow-lg"
+          />
+        </div>
+
         <ul className="mt-8 space-y-3 text-left inline-block">
           {[
             "Hur du identifierar din idealkund med precision",
