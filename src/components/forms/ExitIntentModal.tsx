@@ -29,11 +29,11 @@ export function ExitIntentModal() {
         }}
       >
         {/* Left: Guide cover */}
-        <div className="hidden md:block w-[40%] shrink-0">
+        <div className="hidden md:flex w-[40%] shrink-0 items-center justify-center bg-graphite p-10">
           <img
             src="/guide-cover.png"
             alt="7 beprövade sätt att öka konverteringen och vinna fler affärer"
-            className="h-full w-full object-cover"
+            className="w-full rounded-sm shadow-lg"
           />
         </div>
 
