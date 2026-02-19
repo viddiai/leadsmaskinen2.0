@@ -30,8 +30,7 @@ export function HeroSection() {
           padding: "7rem clamp(1rem, 3vw, 2rem) 4rem",
         }}
       >
-        {/* Text plate first (on top) */}
-        <div className="rounded-2xl bg-white/70 px-8 py-10 text-center shadow-lg backdrop-blur-md sm:px-12">
+        <div className="text-center">
           <AnimateOnScroll>
             <h1 className="text-hero mx-auto max-w-4xl font-[family-name:var(--font-display)] font-extrabold text-graphite">
               {HERO.title}
@@ -72,7 +71,7 @@ export function HeroSection() {
         <img
           src="/hero_image.webp"
           alt="Leadgenereringsprocess – från idealkund till affär"
-          className="mx-auto mt-10 opacity-40"
+          className="mx-auto mt-5 opacity-40"
           style={{ width: "70vw" }}
         />
       </AnimateOnScroll>
