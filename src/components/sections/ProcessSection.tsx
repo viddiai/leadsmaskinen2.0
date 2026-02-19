@@ -18,7 +18,7 @@ export function ProcessSection() {
         <img
           src="/hero_image.webp"
           alt="Leadgenereringsprocess – från idealkund till affär"
-          className="mx-auto mb-10 w-full opacity-50"
+          className="mx-auto mb-10 w-full"
         />
       </AnimateOnScroll>
 
