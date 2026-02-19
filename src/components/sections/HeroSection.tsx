@@ -8,7 +8,7 @@ export function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-white-soft to-white"
+      className="relative flex min-h-screen flex-col items-center justify-end overflow-hidden bg-gradient-to-b from-white-soft to-white"
     >
       {/* Jigsaw pattern background */}
       <div
