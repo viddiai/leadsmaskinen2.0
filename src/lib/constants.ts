@@ -53,7 +53,7 @@ export const PROBLEMS = [
 export const PROCESS_STEPS = [
   {
     step: 1,
-    title: "ICP Persona Audit & Outreach",
+    title: "ICP Persona Workshop & Outreach",
     description:
       "Vi identifierar exakt vilka beslutsfattare du ska nå – och kontaktar dem via cold email och LinkedIn.",
     icon: "Target",
