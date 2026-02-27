@@ -52,7 +52,7 @@ export function ExitIntentModal() {
             {/* Left: Guide cover */}
             <div className="flex justify-center lg:col-span-2">
               <img
-                src="/guide-cover.png"
+                src="/guide-cover-v2.png"
                 alt="7 beprövade sätt att öka konverteringen och vinna fler affärer"
                 className="w-full max-w-xs rounded-lg shadow-[var(--shadow-card-hover)]"
               />

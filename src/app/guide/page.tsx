@@ -35,7 +35,7 @@ export default function GuidePage() {
 
         <div className="mx-auto mt-10 max-w-[260px]">
           <img
-            src="/guide-cover.png"
+            src="/guide-cover-v2.png"
             alt="7 beprövade sätt att öka konverteringen och vinna fler affärer"
             className="w-full rounded-sm shadow-lg"
           />
