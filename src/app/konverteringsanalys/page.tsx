@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import {
   AlertTriangle,
@@ -208,7 +208,7 @@ function LeadForm({
   );
 }
 
-export default function KonverteringsanalysPage() {
+function KonverteringsanalysContent() {
   const searchParams = useSearchParams();
   const initialUrl = searchParams.get("url") || undefined;
   const analyzer = useAnalyzer(initialUrl);
@@ -304,5 +304,13 @@ export default function KonverteringsanalysPage() {
         )}
       </div>
     </SectionWrapper>
+  );
+}
+
+export default function KonverteringsanalysPage() {
+  return (
+    <Suspense>
+      <KonverteringsanalysContent />
+    </Suspense>
   );
 }
