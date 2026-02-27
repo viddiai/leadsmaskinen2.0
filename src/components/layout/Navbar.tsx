@@ -13,7 +13,7 @@ export function Navbar() {
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
   const servicesRef = useRef<HTMLDivElement>(null);
   const activeId = useScrollSpy(
-    NAV_LINKS.map((l) => l.href.replace("#", "")),
+    NAV_LINKS.map((l) => l.href.replace("/#", "")),
     120
   );
 
@@ -108,7 +108,7 @@ export function Navbar() {
               key={link.href}
               href={link.href}
               className={`text-sm font-medium transition-colors ${
-                activeId === link.href.replace("#", "")
+                activeId === link.href.replace("/#", "")
                   ? "text-orange"
                   : "text-steel hover:text-graphite"
               }`}

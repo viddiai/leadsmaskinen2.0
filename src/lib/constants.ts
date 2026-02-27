@@ -8,11 +8,11 @@ export const SITE = {
 } as const;
 
 export const NAV_LINKS = [
-  { label: "Så funkar det", href: "#process" },
-  { label: "Paket", href: "#packages" },
-  { label: "ROI", href: "#roi" },
-  { label: "Guide", href: "#guide" },
-  { label: "FAQ", href: "#faq" },
+  { label: "Så funkar det", href: "/#process" },
+  { label: "Paket", href: "/#packages" },
+  { label: "ROI", href: "/#roi" },
+  { label: "Guide", href: "/#guide" },
+  { label: "FAQ", href: "/#faq" },
 ] as const;
 
 export const HERO = {
