@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useSearchParams } from "next/navigation";
 import {
   AlertTriangle,
   FileText,
@@ -208,7 +209,9 @@ function LeadForm({
 }
 
 export default function KonverteringsanalysPage() {
-  const analyzer = useAnalyzer();
+  const searchParams = useSearchParams();
+  const initialUrl = searchParams.get("url") || undefined;
+  const analyzer = useAnalyzer(initialUrl);
 
   return (
     <SectionWrapper background="gradient" className="min-h-screen pt-32">

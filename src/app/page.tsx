@@ -3,6 +3,7 @@ import { ProblemSection } from "@/components/sections/ProblemSection";
 import { ProcessSection } from "@/components/sections/ProcessSection";
 import { PackagesSection } from "@/components/sections/PackagesSection";
 import { RoiSection } from "@/components/sections/RoiSection";
+import { AnalyzerCtaSection } from "@/components/sections/AnalyzerCtaSection";
 import { ComparisonSection } from "@/components/sections/ComparisonSection";
 import { IdealClientSection } from "@/components/sections/IdealClientSection";
 import { GuideSection } from "@/components/sections/GuideSection";
@@ -15,6 +16,7 @@ export default function Home() {
       <ProblemSection />
       <ProcessSection />
       <RoiSection />
+      <AnalyzerCtaSection />
       <ComparisonSection />
       <IdealClientSection />
       <PackagesSection />

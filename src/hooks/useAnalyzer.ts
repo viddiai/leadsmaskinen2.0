@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
 
 const API_URL =
   "https://konverteringsoptimerare-production.up.railway.app/api";
@@ -29,11 +29,12 @@ type AnalyzerState =
   | "submitting"
   | "done";
 
-export function useAnalyzer() {
+export function useAnalyzer(initialUrl?: string) {
   const [state, setState] = useState<AnalyzerState>("idle");
-  const [url, setUrl] = useState("");
+  const [url, setUrl] = useState(initialUrl || "");
   const [error, setError] = useState("");
   const [result, setResult] = useState<AnalyzeResult | null>(null);
+  const autoStarted = useRef(false);
 
   const analyze = useCallback(async () => {
     const trimmed = url.trim();
@@ -120,6 +121,14 @@ export function useAnalyzer() {
     },
     [result]
   );
+
+  // Auto-start analysis if initialUrl is provided
+  useEffect(() => {
+    if (initialUrl && !autoStarted.current) {
+      autoStarted.current = true;
+      analyze();
+    }
+  }, [initialUrl, analyze]);
 
   const reset = useCallback(() => {
     setState("idle");
