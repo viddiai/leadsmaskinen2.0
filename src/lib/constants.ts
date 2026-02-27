@@ -211,3 +211,31 @@ export const FAQ_ITEMS = [
       "Ja. En fristående ICP Persona Workshop kostar 7 500 kr. Om du sedan väljer att gå vidare med ett paket räknas den av mot startavgiften.",
   },
 ] as const;
+
+// --- Service pages ---
+
+export const SERVICE_NAV_LINKS = [
+  { label: "ICP & Outreach", href: "/tjanster/icp-outreach" },
+  { label: "Landningssida", href: "/tjanster/landningssida" },
+  { label: "Nischportal", href: "/tjanster/portal" },
+  { label: "Marketing Automation", href: "/tjanster/automation" },
+  { label: "ICP Workshop", href: "/tjanster/workshop" },
+] as const;
+
+export const SERVICE_TRUST = {
+  title: "Varför Leadsmaskinen?",
+  body: "Vi levererar inte timmar. Vi levererar leads. Med vår pay-per-lead-modell har vi samma mål som du: Att stänga fler affärer.",
+} as const;
+
+export const SERVICE_FAQ = [
+  {
+    question: "Hur snabbt ser jag resultat?",
+    answer:
+      "Outreach-motorn startar ofta inom 1–3 veckor. De första leadsen kommer vanligtvis direkt efter lansering.",
+  },
+  {
+    question: "Vad kostar ett lead?",
+    answer:
+      "Vi har en flex-modell baserad på ditt affärsvärde, men våra golvpriser börjar på 400 kr för ett MQL.",
+  },
+] as const;

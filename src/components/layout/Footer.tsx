@@ -28,23 +28,28 @@ export function Footer() {
             </h4>
             <ul className="space-y-2 text-sm text-white/60">
               <li>
-                <a href="#packages" className="hover:text-white transition-colors">
-                  Portal (Premium)
+                <a href="/tjanster/portal" className="hover:text-white transition-colors">
+                  Nischportal (Premium)
                 </a>
               </li>
               <li>
-                <a href="#packages" className="hover:text-white transition-colors">
+                <a href="/tjanster/landningssida" className="hover:text-white transition-colors">
                   Landningssida (Standard)
                 </a>
               </li>
               <li>
-                <a href="#process" className="hover:text-white transition-colors">
-                  ICP Persona Workshop
+                <a href="/tjanster/icp-outreach" className="hover:text-white transition-colors">
+                  ICP & Outreach
                 </a>
               </li>
               <li>
-                <a href="#process" className="hover:text-white transition-colors">
+                <a href="/tjanster/automation" className="hover:text-white transition-colors">
                   Marketing Automation
+                </a>
+              </li>
+              <li>
+                <a href="/tjanster/workshop" className="hover:text-white transition-colors">
+                  ICP Workshop
                 </a>
               </li>
             </ul>
