@@ -123,6 +123,15 @@ export function Navbar() {
             )}
           </div>
 
+          <a
+            href="/kalkylator/"
+            className={`text-sm font-medium transition-colors ${
+              lightNav ? "text-slate-300 hover:text-white" : "text-steel hover:text-graphite"
+            }`}
+          >
+            Kalkylator
+          </a>
+
           {NAV_LINKS.map((link) => (
             <a
               key={link.href}
@@ -193,6 +202,14 @@ export function Navbar() {
                 </div>
               )}
             </div>
+
+            <a
+              href="/kalkylator/"
+              onClick={() => setIsMobileOpen(false)}
+              className="text-base font-medium text-steel hover:text-graphite"
+            >
+              Kalkylator
+            </a>
 
             {NAV_LINKS.map((link) => (
               <a
