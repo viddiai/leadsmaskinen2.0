@@ -53,23 +53,23 @@ export const PROBLEMS = [
 export const PROCESS_STEPS = [
   {
     step: 1,
-    title: "ICP Persona Workshop & Outreach",
+    title: "Vi ringer inte 500 fel personer. Vi kontaktar 50 rätta.",
     description:
-      "Vi identifierar exakt vilka beslutsfattare du ska nå – och kontaktar dem via cold email och LinkedIn.",
+      "Din idealkund identifieras ner på titel, bransch och smärtpunkt. Sen når vi dem via cold email och LinkedIn – med ett budskap byggt för att få svar.",
     icon: "Target",
   },
   {
     step: 2,
-    title: "Konverteringsyta",
+    title: "Besökaren får värde. Du får en lead.",
     description:
-      "Portal eller landningssida som ger värde och konverterar besökare till kvalificerade leads.",
+      "En ROI-kalkylator, en audit, en guide – något besökaren faktiskt vill ha. I utbyte lämnar de sina uppgifter. Det är ingen trickkonvertering, det är en affär båda vinner på.",
     icon: "LayoutTemplate",
   },
   {
     step: 3,
-    title: "Marketing Automation",
+    title: "Dina leads bokar möten medan du sover.",
     description:
-      "Automatiserade mejlserier som värmer upp leads hela vägen till bokade möten.",
+      "En automatiserad mejlserie som bygger förtroende steg för steg – tills din lead själv klickar \"boka möte\". Du stänger. Vi levererar.",
     icon: "Workflow",
   },
 ] as const;

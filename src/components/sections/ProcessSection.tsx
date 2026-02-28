@@ -33,7 +33,7 @@ export function ProcessSection() {
               <h3 className="text-h3 mb-3 font-semibold text-graphite">
                 {step.title}
               </h3>
-              <p className="text-body mx-auto max-w-xs text-steel">
+              <p className="text-body mx-auto max-w-sm text-steel">
                 {step.description}
               </p>
             </div>
