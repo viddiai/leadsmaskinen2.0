@@ -69,7 +69,7 @@ export function RoiSection() {
 
         <AnimateOnScroll delay={0.5}>
           <div className="mt-8 text-center">
-            <Button variant="secondary" disabled>
+            <Button variant="secondary" href="/kalkylator/">
               Visa vad mina siffror kan bli
             </Button>
           </div>
