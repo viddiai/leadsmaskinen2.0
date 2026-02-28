@@ -219,6 +219,39 @@ export default function KalkylatorPage() {
         </div>
       </AnimateOnScroll>
 
+      {/* Pipeline visualization */}
+      <AnimateOnScroll delay={0.05}>
+        <div className="mb-10 flex items-start justify-center gap-3 sm:gap-6">
+          {[
+            { step: "1", label: "Outreach", value: fmtSt(outreach) },
+            { step: "2", label: "Besökare till portal", value: fmtSt(calc.portalVisitors) },
+            { step: "3", label: "MQL / SQL", value: `${fmtSt(calc.mqlLeads)} / ${fmtSt(calc.sqlLeads)}` },
+          ].flatMap((item, i, arr) => {
+            const circle = (
+              <div key={item.step} className="flex flex-col items-center">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-orange bg-white text-sm font-bold text-orange shadow-sm">
+                  {item.step}
+                </div>
+                <span className="mt-2 text-center text-xs font-semibold text-graphite" style={{ maxWidth: 110 }}>{item.label}</span>
+                <span className="text-xs text-steel">{item.value}</span>
+              </div>
+            );
+            if (i < arr.length - 1) {
+              const arrow = (
+                <div key={`arrow-${i}`} className="mt-4 flex items-center text-orange/40">
+                  <div className="h-px w-4 bg-current sm:w-8" />
+                  <svg width="10" height="10" viewBox="0 0 10 10" fill="none" className="shrink-0">
+                    <path d="M1 1l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </div>
+              );
+              return [circle, arrow];
+            }
+            return [circle];
+          })}
+        </div>
+      </AnimateOnScroll>
+
       {/* 3 column layout */}
       <div className="grid gap-6 lg:grid-cols-3">
         {/* ── Column 1: Indata ── */}
