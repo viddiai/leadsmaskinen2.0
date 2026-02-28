@@ -368,7 +368,7 @@ export function HeroSection() {
           <div className="flex flex-wrap gap-2 mt-7">
             <TrustBadge text="Pay-per-lead" delay={1.0} />
             <TrustBadge text="Inga retainers" delay={1.15} />
-            <TrustBadge text="Live i 3 veckor" delay={1.3} />
+            <TrustBadge text="Live inom 3 veckor" delay={1.3} />
           </div>
         </div>
 
