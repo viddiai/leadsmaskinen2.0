@@ -53,9 +53,9 @@ export const PROBLEMS = [
 export const PROCESS_STEPS = [
   {
     step: 1,
-    title: "50 rätt slår 500 fel.",
+    title: "Precision, inte volym.",
     description:
-      "Din idealkund identifieras ner på titel, bransch och smärtpunkt. Sen når vi dem via cold email och LinkedIn – med ett budskap byggt för att få svar.",
+      "Vi identifierar de beslutsfattare som faktiskt kan säga ja – och kontaktar dem med ett erbjudande de inte ignorerar. Inga massutskick. Inga gissningar.",
     icon: "Target",
   },
   {
