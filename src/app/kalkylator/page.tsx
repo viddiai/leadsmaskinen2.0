@@ -221,18 +221,20 @@ export default function KalkylatorPage() {
 
       {/* Pipeline visualization */}
       <AnimateOnScroll delay={0.05}>
-        <div className="mb-10 flex items-start justify-center gap-3 sm:gap-6">
+        <div className="mb-10 flex items-start justify-center gap-2 sm:gap-4">
           {[
-            { step: "1", label: "Outreach", value: fmtSt(outreach) },
-            { step: "2", label: "Besökare till portal", value: fmtSt(calc.portalVisitors) },
-            { step: "3", label: "MQL / SQL", value: `${fmtSt(calc.mqlLeads)} / ${fmtSt(calc.sqlLeads)}` },
+            { step: "1", label: "Kontaktade via e-post/LinkedIn", value: fmtSt(outreach) },
+            { step: "2", label: "Besökare till portal/landningssida", value: fmtSt(calc.portalVisitors) },
+            { step: "3", label: "Leads", value: fmtSt(calc.mqlLeads + calc.sqlLeads) },
+            { step: "4", label: "Bokade möten", value: fmtSt(calc.totalDeals) },
+            { step: "5", label: "Affärer", value: fmtSt(calc.totalDeals) },
           ].flatMap((item, i, arr) => {
             const circle = (
               <div key={item.step} className="flex flex-col items-center">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-orange bg-white text-sm font-bold text-orange shadow-sm">
+                <div className="flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full border-2 border-orange bg-white text-xs sm:text-sm font-bold text-orange shadow-sm">
                   {item.step}
                 </div>
-                <span className="mt-2 text-center text-xs font-semibold text-graphite" style={{ maxWidth: 110 }}>{item.label}</span>
+                <span className="mt-2 text-center text-[10px] sm:text-xs font-semibold text-graphite" style={{ maxWidth: 100 }}>{item.label}</span>
                 <span className="text-xs text-steel">{item.value}</span>
               </div>
             );
