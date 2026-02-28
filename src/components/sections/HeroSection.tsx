@@ -156,7 +156,7 @@ function PipelineVisualization() {
                 position: "relative",
                 width: `${widthPercent}%`,
                 minWidth: "120px",
-                height: "42px",
+                minHeight: "42px",
                 background: isActive
                   ? `linear-gradient(90deg, ${COLORS.accentGlow} 0%, rgba(242,106,62,0.05) 100%)`
                   : "rgba(148, 163, 184, 0.03)",
@@ -193,7 +193,7 @@ function PipelineVisualization() {
                   {step.label}
                 </div>
               </div>
-              <div style={{ textAlign: "right" }}>
+              <div style={{ textAlign: "right", whiteSpace: "nowrap", flexShrink: 0 }}>
                 <div
                   className="font-[family-name:var(--font-mono)]"
                   style={{
@@ -218,7 +218,7 @@ function PipelineVisualization() {
 
       {/* Bottom result */}
       <div
-        className="flex justify-between items-center mt-4"
+        className="mt-4"
         style={{
           padding: "14px 16px",
           background: COLORS.accentGlow,
@@ -226,7 +226,8 @@ function PipelineVisualization() {
           border: `1px solid ${COLORS.lineActive}`,
         }}
       >
-        <div>
+        {/* Labels row */}
+        <div className="flex justify-between" style={{ marginBottom: "4px" }}>
           <div
             className="font-[family-name:var(--font-mono)]"
             style={{
@@ -237,17 +238,6 @@ function PipelineVisualization() {
             KUNDENS ROI
           </div>
           <div
-            className="font-[family-name:var(--font-display)]"
-            style={{
-              fontSize: "28px", fontWeight: 800, color: COLORS.accent,
-              lineHeight: 1.1, marginTop: "2px",
-            }}
-          >
-            <AnimatedCounter end={575} suffix="%" delay={1200} />
-          </div>
-        </div>
-        <div style={{ textAlign: "right" }}>
-          <div
             className="font-[family-name:var(--font-mono)]"
             style={{
               fontSize: "10px", fontWeight: 600, letterSpacing: "1px",
@@ -255,6 +245,18 @@ function PipelineVisualization() {
             }}
           >
             TOTAL FÖRSÄLJNING
+          </div>
+        </div>
+        {/* Values row */}
+        <div className="flex justify-between items-baseline">
+          <div
+            className="font-[family-name:var(--font-display)]"
+            style={{
+              fontSize: "28px", fontWeight: 800, color: COLORS.accent,
+              lineHeight: 1.1,
+            }}
+          >
+            <AnimatedCounter end={575} suffix="%" delay={1200} />
           </div>
           <div
             className="font-[family-name:var(--font-mono)]"
