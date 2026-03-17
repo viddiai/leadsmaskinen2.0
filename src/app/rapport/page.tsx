@@ -226,7 +226,7 @@ function ReportContent({ report }: { report: ReportData }) {
             />
 
             {/* Desktop table */}
-            <div className="hidden md:block overflow-x-auto">
+            <div className="max-md:hidden overflow-x-auto">
               <table className="w-full text-left text-sm">
                 <thead>
                   <tr className="border-b border-grey-light">
