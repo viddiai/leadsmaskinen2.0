@@ -13,7 +13,9 @@
   --color-warning: #F4D03F;
   --color-info: #3498DB;
 
-  /* Typography — actual values set by next/font via CSS variables on <html> */
+  /* Typography — fallbacks; next/font class on <html> provides actual values */
+  --font-display: sans-serif;
+  --font-body: sans-serif;
   --font-mono: "JetBrains Mono", monospace;
 
   /* Shadows */

@@ -86,7 +86,7 @@ export function Navbar() {
         </a>
 
         {/* Desktop Nav */}
-        <div className="hidden items-center gap-8 lg:flex">
+        <div className="flex items-center gap-8 max-lg:hidden">
           {/* Tjänster dropdown */}
           <div
             ref={servicesRef}
@@ -160,7 +160,7 @@ export function Navbar() {
 
         {/* Mobile Hamburger */}
         <button
-          className="lg:hidden p-2 cursor-pointer"
+          className="p-2 cursor-pointer lg:hidden"
           onClick={() => setIsMobileOpen(!isMobileOpen)}
           aria-label="Toggle menu"
         >
@@ -174,7 +174,7 @@ export function Navbar() {
 
       {/* Mobile Menu */}
       {isMobileOpen && (
-        <div className="lg:hidden bg-white border-t border-grey-light">
+        <div className="bg-white border-t border-grey-light lg:hidden">
           <div className="flex flex-col gap-4 p-6">
             {/* Tjänster expandable */}
             <div>
