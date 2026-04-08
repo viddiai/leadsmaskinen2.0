@@ -347,6 +347,17 @@ export default function KalkylatorPage() {
                   = pengar du bränner på fel prospekt och dålig data
                 </p>
               </div>
+              <div className="rounded-lg border border-blue-100 bg-blue-50/50 px-4 py-3">
+                <p className="text-xs font-semibold text-blue-800">
+                  Varför försvinner denna kostnad med Leadsmaskinen?
+                </p>
+                <p className="mt-1.5 text-xs leading-relaxed text-blue-900/70">
+                  Istället för att dina säljare lägger tid på kall prospektering mot fel målgrupper
+                  bygger vi en ICP/Persona-styrd outreach som riktar sig till exakt rätt beslutsfattare.
+                  Det innebär att din pipeline fylls med högkvalitativa, förkvalificerade leads —
+                  vilket ger kortare säljcykler, högre konvertering och noll bortkastad prospekteringstid.
+                </p>
+              </div>
             </div>
           </Card>
         </AnimateOnScroll>
