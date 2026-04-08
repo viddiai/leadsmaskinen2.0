@@ -185,8 +185,8 @@ export default function KalkylatorPage() {
     // Nettovinst = marginal - provisioner - investering + besparing
     const netProfit = margin - leadProvision - dealProvision - investment + inefficientCost;
 
-    // LTV
-    const ltvValue = margin * ltvFactor;
+    // LTV (inkl. besparing per år)
+    const ltvValue = (margin + inefficientCost) * ltvFactor;
     const totalCost = leadProvision + dealProvision + investment;
     const roiKr = ltvValue - totalCost;
     const roiPct = totalCost > 0 ? (ltvValue / totalCost) * 100 : 0;
@@ -541,7 +541,7 @@ export default function KalkylatorPage() {
               </h3>
 
               <InputField
-                label="LTV (Faktor)"
+                label="LTV (År)"
                 value={ltvFactor}
                 onChange={setLtvFactor}
               />
