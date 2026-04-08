@@ -182,8 +182,8 @@ export default function KalkylatorPage() {
     const totalProspectingCost = prospectingHoursPerYear * hourlyRate;
     const inefficientCost = totalProspectingCost * (inefficiencyPct / 100);
 
-    // Nettovinst = marginal - provisioner + besparing
-    const netProfit = margin - leadProvision - dealProvision + inefficientCost;
+    // Nettovinst = marginal - provisioner - investering + besparing
+    const netProfit = margin - leadProvision - dealProvision - investment + inefficientCost;
 
     // LTV
     const ltvValue = margin * ltvFactor;
@@ -494,6 +494,12 @@ export default function KalkylatorPage() {
                 value={fmtKr(calc.dealProvision)}
                 variant="light"
               />
+              <InputField
+                label="Investering"
+                suffix="kr"
+                value={investment}
+                onChange={setInvestment}
+              />
 
               {/* Besparing från säljarkostnadskalkyl */}
               <ResultCard
@@ -513,7 +519,7 @@ export default function KalkylatorPage() {
                   {fmtKr(calc.netProfit)}
                 </p>
                 <p className="relative mt-1 text-[10px] text-green-600/70">
-                  Marginal − provisioner + besparing
+                  Marginal − provisioner − investering + besparing
                 </p>
               </div>
 
@@ -523,19 +529,11 @@ export default function KalkylatorPage() {
                 Livstidsvärde
               </h3>
 
-              <div className="space-y-4">
-                <InputField
-                  label="Investering"
-                  suffix="kr"
-                  value={investment}
-                  onChange={setInvestment}
-                />
-                <InputField
-                  label="LTV (Faktor)"
-                  value={ltvFactor}
-                  onChange={setLtvFactor}
-                />
-              </div>
+              <InputField
+                label="LTV (Faktor)"
+                value={ltvFactor}
+                onChange={setLtvFactor}
+              />
 
               <div>
                 <p className="mb-1.5 text-sm font-medium text-steel">LTV (Värde)</p>
