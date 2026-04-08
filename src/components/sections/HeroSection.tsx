@@ -93,6 +93,7 @@ function PipelineVisualization() {
   const [activeStep, setActiveStep] = useState(0);
 
   const steps = [
+    { label: "Besparing", count: "374 400", sub: "kr/år prospektering", icon: "💸" },
     { label: "Outreach", count: "10 000", sub: "kontakter", icon: "📡" },
     { label: "Besökare", count: "1 500", sub: "15% CTR", icon: "👁" },
     { label: "MQL", count: "150", sub: "kvalificerade", icon: "🎯" },
@@ -244,7 +245,7 @@ function PipelineVisualization() {
               color: COLORS.textMuted, textTransform: "uppercase",
             }}
           >
-            TOTAL FÖRSÄLJNING
+            TOTAL BESPARING/FÖRSÄLJNING
           </div>
         </div>
         {/* Values row */}
@@ -256,7 +257,7 @@ function PipelineVisualization() {
               lineHeight: 1.1,
             }}
           >
-            <AnimatedCounter end={575} suffix="%" delay={1200} />
+            <AnimatedCounter end={338} suffix="%" delay={1200} />
           </div>
           <div
             className="font-[family-name:var(--font-mono)]"
@@ -265,7 +266,7 @@ function PipelineVisualization() {
               marginTop: "2px",
             }}
           >
-            <AnimatedCounter end={2300} suffix=" tkr" delay={1500} duration={2500} />
+            <AnimatedCounter end={2624} suffix=" tkr" delay={1500} duration={2500} />
           </div>
         </div>
       </div>
