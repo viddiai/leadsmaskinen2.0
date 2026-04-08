@@ -245,7 +245,7 @@ function PipelineVisualization() {
               color: COLORS.textMuted, textTransform: "uppercase",
             }}
           >
-            TOTAL BESPARING/FÖRSÄLJNING
+            NETTOVINST
           </div>
         </div>
         {/* Values row */}
@@ -266,7 +266,7 @@ function PipelineVisualization() {
               marginTop: "2px",
             }}
           >
-            <AnimatedCounter end={2624} suffix=" tkr" delay={1500} duration={2500} />
+            <AnimatedCounter end={739400} suffix=" kr" delay={1500} duration={2500} />
           </div>
         </div>
       </div>
