@@ -303,7 +303,7 @@ export default function KalkylatorPage() {
               />
               <div>
                 <label className="mb-1.5 flex items-center text-sm font-medium text-graphite">
-                  Ineffektiv andel (fel ICP / dålig data)
+                  Ineffektiv andel prospekteringstid (fel ICP / dålig data)
                   <Tooltip text="Analyser visar att upp till 50 % av prospekteringstiden är ineffektiv p.g.a. dålig data eller fel målgrupp." />
                 </label>
                 <div className="flex items-center gap-3">
