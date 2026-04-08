@@ -120,10 +120,11 @@ export const ROI_STATS = [
 ] as const;
 
 export const ROI_RESULT = {
-  revenue: "2 300 000 kr",
-  investment: "240 000 kr",
-  profit: "450 000 kr",
-  roi: "575%",
+  revenue: "2 250 000 kr",
+  investment: "310 000 kr",
+  savings: "374 400 kr",
+  profit: "739 400 kr",
+  roi: "338%",
 } as const;
 
 export const COMPARISON = [

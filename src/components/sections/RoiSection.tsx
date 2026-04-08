@@ -10,8 +10,8 @@ export function RoiSection() {
   return (
     <SectionWrapper id="roi" background="soft">
       <SectionHeading
-        title="575% ROI – räkna själv."
-        subtitle="Baserat på en portalkund med 100 000 kr i genomsnittligt affärsvärde."
+        title="338 % ROI första året – räkna själv."
+        subtitle="Baserat på en portalkund med 3 säljare och 100 000 kr i genomsnittligt affärsvärde."
       />
 
       <div className="mx-auto max-w-4xl">
@@ -34,7 +34,7 @@ export function RoiSection() {
         {/* Result box */}
         <AnimateOnScroll delay={0.4}>
           <div className="mt-10 rounded-lg bg-graphite p-8 text-center text-white">
-            <div className="grid gap-6 sm:grid-cols-3">
+            <div className="grid gap-6 sm:grid-cols-4">
               <div>
                 <span className="block text-sm uppercase tracking-wider text-white/50">
                   Total försäljning
@@ -49,6 +49,14 @@ export function RoiSection() {
                 </span>
                 <span className="mt-1 block text-2xl font-bold">
                   {ROI_RESULT.investment}
+                </span>
+              </div>
+              <div>
+                <span className="block text-sm uppercase tracking-wider text-white/50">
+                  Besparing
+                </span>
+                <span className="mt-1 block text-2xl font-bold text-orange">
+                  {ROI_RESULT.savings}
                 </span>
               </div>
               <div>
@@ -69,7 +77,7 @@ export function RoiSection() {
 
         <AnimateOnScroll delay={0.5}>
           <div className="mt-8 text-center">
-            <Button variant="secondary" href="/kalkylator/">
+            <Button href="/kalkylator/">
               Visa vad mina siffror kan bli
             </Button>
           </div>
