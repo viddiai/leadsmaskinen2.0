@@ -25,7 +25,7 @@ export function FinalCtaSection() {
         }}
       >
         <AnimateOnScroll>
-          <h2 className="text-h2 mx-auto max-w-2xl font-[family-name:var(--font-display)] font-bold text-white">
+          <h2 className="text-h2 mx-auto max-w-2xl font-[family-name:var(--font-display)] font-medium text-white">
             Redo att bygga din leadmotor?
           </h2>
         </AnimateOnScroll>

@@ -42,7 +42,7 @@ export function GuideSection() {
 
             {/* Content */}
             <div className="lg:col-span-3">
-              <h2 className="font-[family-name:var(--font-display)] text-h3 font-bold text-graphite">
+              <h2 className="font-[family-name:var(--font-display)] text-h3 font-medium text-graphite">
                 7 beprövade sätt att öka konverteringen och vinna fler affärer
               </h2>
 

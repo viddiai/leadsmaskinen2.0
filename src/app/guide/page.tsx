@@ -24,7 +24,7 @@ export default function GuidePage() {
           Gratis guide
         </span>
 
-        <h1 className="text-h1 mt-6 font-[family-name:var(--font-display)] font-extrabold text-graphite">
+        <h1 className="text-h1 mt-6 font-[family-name:var(--font-display)] font-medium text-graphite">
           7 beprövade sätt att öka konverteringen och vinna fler affärer
         </h1>
 

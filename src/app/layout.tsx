@@ -1,21 +1,26 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { Inter, Poppins, JetBrains_Mono } from "next/font/google";
+import { Montserrat, JetBrains_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { ExitIntentModal } from "@/components/forms/ExitIntentModal";
 import { StructuredData } from "@/components/shared/StructuredData";
 import "./globals.css";
 
-const inter = Inter({
+const montserrat = Montserrat({
   subsets: ["latin"],
   variable: "--font-body",
   display: "swap",
 });
 
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["600", "700", "800"],
+const larsseit = localFont({
+  src: [
+    { path: "../../public/fonts/LarsseitLight.woff", weight: "300", style: "normal" },
+    { path: "../../public/fonts/LarsseitMedium.woff", weight: "500", style: "normal" },
+    { path: "../../public/fonts/LarsseitBold.woff", weight: "700", style: "normal" },
+    { path: "../../public/fonts/LarsseitExtraBold.woff", weight: "800", style: "normal" },
+  ],
   variable: "--font-display",
   display: "swap",
 });
@@ -66,7 +71,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="sv" className={`${inter.variable} ${poppins.variable} ${jetbrainsMono.variable}`}>
+    <html lang="sv" className={`${montserrat.variable} ${larsseit.variable} ${jetbrainsMono.variable}`}>
       <head>
         <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
       </head>

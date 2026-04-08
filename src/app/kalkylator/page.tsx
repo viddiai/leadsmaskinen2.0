@@ -156,6 +156,14 @@ export default function KalkylatorPage() {
   const [investment, setInvestment] = useState(0);
   const [ltvFactor, setLtvFactor] = useState(2);
 
+  // Säljkostnads-sektionen
+  const [salespersonOpen, setSalespersonOpen] = useState(false);
+  const [numSalespeople, setNumSalespeople] = useState(3);
+  const [hourlyRate, setHourlyRate] = useState(600);
+  const [prospectingHoursPerWeek, setProspectingHoursPerWeek] = useState(12);
+  const [inefficiencyPct, setInefficiencyPct] = useState(50);
+  const [leadsmaskinenMonthly, setLeadsmaskinenMonthly] = useState(15000);
+
   // Direktberäkningar
   const calc = useMemo(() => {
     const portalVisitors = outreach * (portalPct / 100);
@@ -178,6 +186,13 @@ export default function KalkylatorPage() {
     const roiKr = ltvValue - totalCost;
     const roiPct = totalCost > 0 ? (ltvValue / totalCost) * 100 : 0;
 
+    // Säljkostnad
+    const prospectingHoursPerYear = numSalespeople * prospectingHoursPerWeek * 52;
+    const totalProspectingCost = prospectingHoursPerYear * hourlyRate;
+    const inefficientCost = totalProspectingCost * (inefficiencyPct / 100);
+    const leadsmaskinenYearly = leadsmaskinenMonthly * 12;
+    const netSavings = inefficientCost - leadsmaskinenYearly;
+
     return {
       portalVisitors,
       mqlLeads,
@@ -195,11 +210,16 @@ export default function KalkylatorPage() {
       ltvValue,
       roiKr,
       roiPct,
+      prospectingHoursPerYear,
+      totalProspectingCost,
+      inefficientCost,
+      netSavings,
     };
   }, [
     dealValue, mqlRate, sqlRate, dealRate, outreach,
     portalPct, mqlPct, sqlPct, mqlDealPct, sqlDealPct,
     marginPct, investment, ltvFactor,
+    numSalespeople, hourlyRate, prospectingHoursPerWeek, inefficiencyPct, leadsmaskinenMonthly,
   ]);
 
   return (
@@ -210,10 +230,10 @@ export default function KalkylatorPage() {
           <span className="inline-block rounded-full bg-orange-light px-4 py-1.5 text-sm font-medium text-orange">
             ROI-kalkylator
           </span>
-          <h1 className="text-h2 mt-4 font-[family-name:var(--font-display)] font-extrabold text-graphite">
+          <h1 className="text-h2 mt-4 font-[family-name:var(--font-display)] font-medium text-graphite">
             Beräkna din ROI
           </h1>
-          <p className="text-body mt-3 text-steel">
+          <p className="text-body mt-3 font-light text-steel font-[family-name:var(--font-display)]">
             Fyll i värdena för att se estimerad försäljning, marginal, nettovinst och ROI.
           </p>
         </div>
@@ -449,6 +469,137 @@ export default function KalkylatorPage() {
           </Card>
         </AnimateOnScroll>
       </div>
+
+      {/* ── Säljkostnads-sektion (accordion) ── */}
+      <AnimateOnScroll delay={0.3}>
+        <div className="mt-6 overflow-hidden rounded-xl border border-grey-light shadow-sm">
+          {/* Trigger */}
+          <button
+            onClick={() => setSalespersonOpen(!salespersonOpen)}
+            className="flex w-full items-center justify-between bg-gradient-to-r from-[#1e3a5f] to-blue-600 px-6 py-4 text-left"
+          >
+            <div>
+              <span className="block text-xs font-semibold uppercase tracking-wider text-blue-200">
+                Säljarkostnadskalkyl
+              </span>
+              <span className="mt-0.5 block text-base font-bold text-white">
+                💸 Vad kostar din säljkår på prospektering idag?
+              </span>
+            </div>
+            <svg
+              className={`h-5 w-5 shrink-0 text-blue-200 transition-transform duration-200 ${salespersonOpen ? "rotate-180" : ""}`}
+              fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+
+          {/* Body */}
+          {salespersonOpen && (
+            <div className="bg-white-soft p-6">
+              <div className="grid gap-6 lg:grid-cols-2">
+                {/* Inputs */}
+                <div>
+                  <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-steel">
+                    Dina värden
+                  </h3>
+                  <div className="space-y-4">
+                    <InputField
+                      label="Antal säljare"
+                      suffix="st"
+                      value={numSalespeople}
+                      onChange={setNumSalespeople}
+                    />
+                    <InputField
+                      label="Internkostnad per timme"
+                      suffix="kr"
+                      value={hourlyRate}
+                      onChange={setHourlyRate}
+                      tooltip="Full internkostnad inkl. lön, sociala avgifter, pension, IT etc. Typiskt 400–820 kr/h för AE/SDR."
+                    />
+                    <InputField
+                      label="Prospekteringstid per säljare/vecka"
+                      suffix="h"
+                      value={prospectingHoursPerWeek}
+                      onChange={setProspectingHoursPerWeek}
+                      tooltip="Typiskt 8–16 timmar/vecka (20–40 % av arbetstiden) för B2B-säljare."
+                    />
+                    <div>
+                      <label className="mb-1.5 flex items-center text-sm font-medium text-graphite">
+                        Ineffektiv andel (fel ICP / dålig data)
+                        <Tooltip text="Analyser visar att upp till 50 % av prospekteringstiden är ineffektiv p.g.a. dålig data eller fel målgrupp." />
+                      </label>
+                      <div className="flex items-center gap-3">
+                        <input
+                          type="range"
+                          min={0}
+                          max={100}
+                          step={5}
+                          value={inefficiencyPct}
+                          onChange={(e) => setInefficiencyPct(Number(e.target.value))}
+                          className="flex-1 accent-blue-600"
+                        />
+                        <div className="w-20 shrink-0">
+                          <InputField
+                            label=""
+                            suffix="%"
+                            value={inefficiencyPct}
+                            readOnly
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <InputField
+                      label="Leadsmaskinen — kostnad per månad"
+                      suffix="kr"
+                      value={leadsmaskinenMonthly}
+                      onChange={setLeadsmaskinenMonthly}
+                    />
+                  </div>
+                </div>
+
+                {/* Resultat */}
+                <div>
+                  <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-steel">
+                    Vad det kostar
+                  </h3>
+                  <div className="space-y-3">
+                    <ResultCard
+                      label="Prospekteringstimmar per år (totalt team)"
+                      value={`${fmt(calc.prospectingHoursPerYear)} h`}
+                    />
+                    <ResultCard
+                      label="Total prospekteringskostnad per år"
+                      value={fmtKr(calc.totalProspectingCost)}
+                      variant="orange"
+                    />
+                    <div className="rounded-lg border border-orange/30 bg-orange-light px-4 py-3">
+                      <p className="text-xs font-medium text-steel">
+                        varav ineffektiv tid ({fmt(inefficiencyPct)} %)
+                      </p>
+                      <p className="text-lg font-bold text-orange">{fmtKr(calc.inefficientCost)}</p>
+                      <p className="mt-0.5 text-[10px] text-steel/70">
+                        = pengar du bränner på fel prospekt och dålig data
+                      </p>
+                    </div>
+                    <div className={`rounded-lg border-2 px-4 py-4 ${calc.netSavings >= 0 ? "border-green-300 bg-green-100" : "border-red-200 bg-red-50"}`}>
+                      <p className={`text-xs font-semibold ${calc.netSavings >= 0 ? "text-green-700" : "text-red-600"}`}>
+                        {calc.netSavings >= 0 ? "✅ BESPARING MED LEADSMASKINEN / ÅR" : "⚠️ LEADSMASKINEN KOSTAR MER ÄN INEFFEKTIV TID"}
+                      </p>
+                      <p className={`text-2xl font-extrabold ${calc.netSavings >= 0 ? "text-green-700" : "text-red-600"}`}>
+                        {calc.netSavings >= 0 ? "+" : ""}{fmtKr(calc.netSavings)}
+                      </p>
+                      <p className="mt-1 text-[10px] text-steel/70">
+                        Ineffektiv prospekteringskostnad ({fmtKr(calc.inefficientCost)}) − Leadsmaskinen/år ({fmtKr(calc.inefficientCost - calc.netSavings)})
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
+      </AnimateOnScroll>
     </SectionWrapper>
   );
 }

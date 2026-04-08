@@ -60,7 +60,7 @@ export function ExitIntentModal() {
 
             {/* Right: Content */}
             <div className="lg:col-span-3">
-              <h2 className="font-[family-name:var(--font-display)] text-h3 font-bold text-graphite">
+              <h2 className="font-[family-name:var(--font-display)] text-h3 font-medium text-graphite">
                 7 beprövade sätt att öka konverteringen och vinna fler affärer
               </h2>
 
@@ -113,7 +113,7 @@ export function ExitIntentModal() {
             <div className="flex h-14 w-14 items-center justify-center rounded-full bg-orange-light">
               <Check className="h-7 w-7 text-orange" />
             </div>
-            <h2 className="mt-4 font-[family-name:var(--font-display)] text-2xl font-bold text-graphite">
+            <h2 className="mt-4 font-[family-name:var(--font-display)] text-2xl font-medium text-graphite">
               Tack!
             </h2>
             <p className="mt-2 text-body text-steel">

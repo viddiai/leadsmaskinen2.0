@@ -33,7 +33,7 @@ export default function LandningssidaPage() {
             </span>
           </AnimateOnScroll>
           <AnimateOnScroll delay={0.1}>
-            <h1 className="mt-6 font-[family-name:var(--font-display)] text-h1 font-extrabold text-graphite">
+            <h1 className="mt-6 font-[family-name:var(--font-display)] text-h1 font-medium text-graphite">
               En landningssida byggd för att konvertera – klar på 1 vecka.
             </h1>
           </AnimateOnScroll>

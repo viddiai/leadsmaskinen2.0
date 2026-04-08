@@ -50,7 +50,7 @@ export default function IcpOutreachPage() {
             </span>
           </AnimateOnScroll>
           <AnimateOnScroll delay={0.1}>
-            <h1 className="mt-6 font-[family-name:var(--font-display)] text-h1 font-extrabold text-graphite">
+            <h1 className="mt-6 font-[family-name:var(--font-display)] text-h1 font-medium text-graphite">
               Sluta gissa. Börja träffa rätt beslutsfattare.
             </h1>
           </AnimateOnScroll>
@@ -101,7 +101,7 @@ export default function IcpOutreachPage() {
                 <span className="text-xs font-semibold uppercase tracking-wider text-orange">
                   Steg {s.step}
                 </span>
-                <h3 className="mt-2 font-[family-name:var(--font-display)] text-lg font-bold text-graphite">
+                <h3 className="mt-2 font-[family-name:var(--font-display)] text-lg font-medium text-graphite">
                   {s.title}
                 </h3>
                 <p className="mt-2 text-sm text-steel leading-relaxed">

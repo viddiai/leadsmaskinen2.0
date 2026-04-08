@@ -56,7 +56,7 @@ export default function PortalPage() {
             </span>
           </AnimateOnScroll>
           <AnimateOnScroll delay={0.1}>
-            <h1 className="mt-6 font-[family-name:var(--font-display)] text-h1 font-extrabold text-graphite">
+            <h1 className="mt-6 font-[family-name:var(--font-display)] text-h1 font-medium text-graphite">
               Bli den självklara auktoriteten i din nisch med en egen portal.
             </h1>
           </AnimateOnScroll>
@@ -102,7 +102,7 @@ export default function PortalPage() {
                 <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-orange-light">
                   <part.icon className="h-5 w-5 text-orange" />
                 </div>
-                <h3 className="font-[family-name:var(--font-display)] text-lg font-bold text-graphite">
+                <h3 className="font-[family-name:var(--font-display)] text-lg font-medium text-graphite">
                   {part.title}
                 </h3>
                 <p className="mt-2 text-sm text-steel leading-relaxed">

@@ -88,7 +88,7 @@ function ReportContent({ report }: { report: ReportData }) {
         <div className="mb-2">
           <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
             <div>
-              <h1 className="text-h2 font-[family-name:var(--font-display)] font-extrabold text-graphite">
+              <h1 className="text-h2 font-[family-name:var(--font-display)] font-medium text-graphite">
                 {report.company_name || "Konverteringsrapport"}
               </h1>
               {report.industry_label && (

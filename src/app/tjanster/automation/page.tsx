@@ -51,7 +51,7 @@ export default function AutomationPage() {
             </span>
           </AnimateOnScroll>
           <AnimateOnScroll delay={0.1}>
-            <h1 className="mt-6 font-[family-name:var(--font-display)] text-h1 font-extrabold text-graphite">
+            <h1 className="mt-6 font-[family-name:var(--font-display)] text-h1 font-medium text-graphite">
               Sälj medan du sover. Automatisera din uppföljning.
             </h1>
           </AnimateOnScroll>
@@ -96,7 +96,7 @@ export default function AutomationPage() {
                 <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-orange-light">
                   <f.icon className="h-5 w-5 text-orange" />
                 </div>
-                <h3 className="font-[family-name:var(--font-display)] text-lg font-bold text-graphite">
+                <h3 className="font-[family-name:var(--font-display)] text-lg font-medium text-graphite">
                   {f.title}
                 </h3>
                 <p className="mt-2 text-sm text-steel leading-relaxed">

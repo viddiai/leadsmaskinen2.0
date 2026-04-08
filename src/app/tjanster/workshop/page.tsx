@@ -33,7 +33,7 @@ export default function WorkshopPage() {
             </span>
           </AnimateOnScroll>
           <AnimateOnScroll delay={0.1}>
-            <h1 className="mt-6 font-[family-name:var(--font-display)] text-h1 font-extrabold text-graphite">
+            <h1 className="mt-6 font-[family-name:var(--font-display)] text-h1 font-medium text-graphite">
               Grunden för all framgångsrik försäljning: Din ICP.
             </h1>
           </AnimateOnScroll>
@@ -75,7 +75,7 @@ export default function WorkshopPage() {
           <div className="mx-auto mt-10 max-w-2xl">
             <Card highlighted>
               <div className="text-center">
-                <p className="text-h2 font-[family-name:var(--font-display)] font-extrabold text-graphite">
+                <p className="text-h2 font-[family-name:var(--font-display)] font-medium text-graphite">
                   7 500 <span className="text-h3 text-steel">kr</span>
                 </p>
                 <p className="mt-2 text-body text-steel">

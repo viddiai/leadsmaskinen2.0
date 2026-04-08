@@ -25,7 +25,7 @@ export function AnalyzerCtaSection() {
             <span className="inline-block rounded-full bg-orange-light px-4 py-1.5 text-sm font-medium text-orange">
               Gratis verktyg
             </span>
-            <h2 className="text-h1 mt-6 font-[family-name:var(--font-display)] font-extrabold text-graphite">
+            <h2 className="text-h1 mt-6 font-[family-name:var(--font-display)] font-medium text-graphite">
               Testa din webbsidas konverteringsförmåga
             </h2>
             <p className="text-body-lg mt-4 text-steel">

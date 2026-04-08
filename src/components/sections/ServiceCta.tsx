@@ -21,7 +21,7 @@ export function ServiceCta({ title, subtitle, cta }: ServiceCtaProps) {
         }}
       >
         <AnimateOnScroll>
-          <h2 className="font-[family-name:var(--font-display)] text-h2 font-bold text-white">
+          <h2 className="font-[family-name:var(--font-display)] text-h2 font-medium text-white">
             {title}
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-body-lg text-white/70">

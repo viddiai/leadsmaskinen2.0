@@ -11,7 +11,7 @@ export default function IntegritetspolicyPage() {
   return (
     <SectionWrapper className="min-h-screen pt-48 pb-20">
       <div className="mx-auto max-w-3xl">
-        <h1 className="text-h1 font-[family-name:var(--font-display)] font-extrabold text-graphite">
+        <h1 className="text-h1 font-[family-name:var(--font-display)] font-medium text-graphite">
           Integritetspolicy
         </h1>
         <p className="text-body text-steel mt-4">
