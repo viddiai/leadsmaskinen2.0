@@ -16,7 +16,7 @@ export function ProcessSection() {
       {/* Process illustration */}
       <AnimateOnScroll>
         <img
-          src="/3step.png"
+          src="/3step_black.png"
           alt="Leadgenereringsprocess – från idealkund till affär"
           className="mx-auto mb-10 w-full"
         />
