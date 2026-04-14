@@ -8,7 +8,7 @@ export function IdealClientSection() {
   return (
     <section
       id="ideal-client"
-      className="bg-graphite py-16 md:py-24"
+      className="bg-white/[0.03] py-16 md:py-24"
     >
       <div
         className="mx-auto w-full"
