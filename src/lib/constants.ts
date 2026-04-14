@@ -161,18 +161,21 @@ export const COMPARISON = [
 ] as const;
 
 export const IDEAL_FIT = [
-  "B2B med höga priser eller marginaler",
-  "Bevisat erbjudande, behöver mer pipeline",
-  "Kapacitet att följa upp och stänga leads",
-  "Villig att delta i ICP-workshop",
-  "Öppen för AI-driven automation",
+  "B2B med höga priser eller goda marginaler",
+  "Fungerande erbjudande men ojämnt leadflöde",
+  "Beredd att delta i en ICP-workshop",
+  "Kan vara bollplank kring budskap och erbjudanden",
+  "Har kapacitet att följa upp leads som kommer in",
+  "Öppen för AI och automation",
 ] as const;
 
 export const POOR_FIT = [
   "Nystartat utan bevisad affärsmodell",
-  "B2C eller mycket låga marginaler",
+  "B2C eller låga marginaler",
   "Ingen som aktivt bearbetar leads",
-  "Söker snabba engångsresultat",
+  "Vill ha snabba engångsresultat",
+  "Inte intresserad av dialog kring målgrupp och budskap",
+  "Intern oenighet om säljstrategi",
 ] as const;
 
 export const FAQ_ITEMS = [
