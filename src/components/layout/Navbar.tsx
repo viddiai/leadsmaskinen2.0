@@ -81,7 +81,7 @@ export function Navbar() {
             lightNav ? "text-white" : "text-graphite"
           }`}
         >
-          <img src="/logo_circle.webp" alt="" className="h-8 w-auto" />
+          <img src="/logo_circle.png" alt="" className="h-8 w-auto" />
           <span>Leads<span className="text-orange">maskinen</span></span>
         </a>
 

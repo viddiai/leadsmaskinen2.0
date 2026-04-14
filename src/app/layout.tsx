@@ -60,8 +60,8 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   icons: {
-    icon: "/logo_circle.webp",
-    apple: "/logo_circle.webp",
+    icon: "/logo_circle.png",
+    apple: "/logo_circle.png",
   },
 };
 
