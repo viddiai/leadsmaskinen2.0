@@ -20,7 +20,7 @@ function PricingCard({
       <Card highlighted={pkg.popular} className="relative flex flex-col h-full">
         {pkg.popular && (
           <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-orange px-4 py-1 text-xs font-bold uppercase tracking-wider text-white">
-            Populärast
+            Introduktion
           </span>
         )}
 
