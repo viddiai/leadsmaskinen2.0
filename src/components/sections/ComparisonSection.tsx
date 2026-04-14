@@ -15,7 +15,7 @@ const AGENCY_CONS = [
 ];
 
 const LM_PROS = [
-  "Betalt kopplat till levererade leads (pay-per-lead)",
+  "Ersättning kopplat till levererade leads (pay-per-lead)",
   "Gemensamma incitament: vi vinner när partnern får leads",
   "Full transparens i gemensam dashboard",
   "Snabbare leverans genom produktiserat, automatiserat arbetssätt",
