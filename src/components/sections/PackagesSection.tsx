@@ -32,6 +32,16 @@ function PricingCard({
         </div>
 
         <div className="mb-6">
+          {"originalPrice" in pkg && pkg.originalPrice && (
+            <div className="mb-1 flex items-center gap-2">
+              <span className="text-lg text-white/30 line-through">
+                {pkg.originalPrice} {pkg.unit}
+              </span>
+              <span className="rounded-full bg-orange/20 px-2.5 py-0.5 text-xs font-semibold text-orange">
+                SPARA {(parseInt(String(pkg.originalPrice).replace(/\s/g, "")) - parseInt(pkg.price.replace(/\s/g, ""))).toLocaleString("sv-SE")} kr
+              </span>
+            </div>
+          )}
           <span className="text-h1 font-extrabold text-white">
             {pkg.price}
           </span>

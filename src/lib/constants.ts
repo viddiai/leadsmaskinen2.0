@@ -79,9 +79,10 @@ export const PACKAGES = {
     name: "Portal",
     label: "Premium",
     popular: true,
+    originalPrice: "75 000",
     price: "25 000",
     unit: "kr",
-    priceNote: "Engångsavgift",
+    priceNote: "Introduktionspris",
     delivery: "3 veckor",
     features: [
       "ICP Persona Workshop (inkluderad)",
