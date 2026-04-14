@@ -16,11 +16,11 @@ export default function TackPage() {
           <Check className="h-8 w-8 text-success" />
         </div>
 
-        <h1 className="text-h1 mt-6 font-[family-name:var(--font-display)] font-medium text-graphite">
+        <h1 className="text-h1 mt-6 font-[family-name:var(--font-display)] font-medium text-white">
           Tack!
         </h1>
 
-        <p className="text-body-lg mt-4 text-steel">
+        <p className="text-body-lg mt-4 text-white/60">
           Vi har tagit emot ditt meddelande och återkommer inom 24 timmar.
         </p>
 

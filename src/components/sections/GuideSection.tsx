@@ -29,7 +29,7 @@ export function GuideSection() {
   return (
     <SectionWrapper id="guide" background="white">
       <AnimateOnScroll>
-        <div className="mx-auto max-w-5xl overflow-hidden rounded-2xl border border-grey-light bg-white-soft shadow-[var(--shadow-card)]">
+        <div className="mx-auto max-w-5xl overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03]">
           <div className="grid items-center gap-8 p-6 sm:p-10 lg:grid-cols-5 lg:gap-12">
             {/* Cover image */}
             <div className="flex justify-center lg:col-span-2">
@@ -42,23 +42,23 @@ export function GuideSection() {
 
             {/* Content */}
             <div className="lg:col-span-3">
-              <h2 className="font-[family-name:var(--font-display)] text-h3 font-medium text-graphite">
+              <h2 className="font-[family-name:var(--font-display)] text-h3 font-medium text-white">
                 7 beprövade sätt att öka konverteringen och vinna fler affärer
               </h2>
 
-              <p className="mt-4 font-semibold text-graphite">Denna guide ger dig</p>
-              <p className="mt-1 text-sm text-steel">Konkreta verktyg för att:</p>
+              <p className="mt-4 font-semibold text-white">Denna guide ger dig</p>
+              <p className="mt-1 text-sm text-white/60">Konkreta verktyg för att:</p>
 
               <ul className="mt-3 space-y-2">
                 {BENEFITS.map((benefit) => (
-                  <li key={benefit} className="flex items-start gap-2 text-sm text-steel">
+                  <li key={benefit} className="flex items-start gap-2 text-sm text-white/60">
                     <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-orange" />
                     {benefit}
                   </li>
                 ))}
               </ul>
 
-              <p className="mt-5 flex items-start gap-2 rounded-lg bg-orange-light px-4 py-3 text-sm text-graphite">
+              <p className="mt-5 flex items-start gap-2 rounded-lg bg-orange/10 px-4 py-3 text-sm text-white">
                 <span className="flex-shrink-0">💡</span>
                 Kom ihåg: Varje kapitel avslutas med &quot;3 saker du kan göra imorgon&quot; – konkreta åtgärder som ger omedelbar effekt.
               </p>
@@ -76,7 +76,7 @@ export function GuideSection() {
                       placeholder="Din e-postadress"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      className="flex-1 rounded-md border border-grey-light bg-white px-4 py-3 text-sm text-graphite placeholder:text-steel/50 focus:border-orange focus:outline-none focus:ring-2 focus:ring-orange/20"
+                      className="flex-1 rounded-md border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-white/30 focus:border-orange focus:outline-none focus:ring-2 focus:ring-orange/20"
                     />
                     <button
                       type="submit"
@@ -86,9 +86,9 @@ export function GuideSection() {
                       {status === "loading" ? "Skickar..." : "Hämta guiden"}
                     </button>
                   </div>
-                  <p className="mt-2 text-xs text-steel">
+                  <p className="mt-2 text-xs text-white/60">
                     Vi behandlar dina uppgifter enligt vår{" "}
-                    <a href="/integritetspolicy/" className="underline hover:text-graphite">
+                    <a href="/integritetspolicy/" className="underline hover:text-white">
                       integritetspolicy
                     </a>
                     .

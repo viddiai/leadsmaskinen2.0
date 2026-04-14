@@ -11,7 +11,7 @@ export function SectionHeading({
 }: SectionHeadingProps) {
   return (
     <div className={`mb-12 ${centered ? "text-center" : ""}`}>
-      <h2 className="text-h2 font-medium text-graphite font-[family-name:var(--font-display)]">
+      <h2 className="text-h2 font-medium text-white font-[family-name:var(--font-display)]">
         {title}
       </h2>
       <div
@@ -19,7 +19,7 @@ export function SectionHeading({
       />
       {subtitle && (
         <p
-          className={`text-body-lg mt-6 font-light text-steel font-[family-name:var(--font-display)] ${centered ? "mx-auto max-w-2xl" : "max-w-2xl"}`}
+          className={`text-body-lg mt-6 font-light text-white/60 font-[family-name:var(--font-display)] ${centered ? "mx-auto max-w-2xl" : "max-w-2xl"}`}
         >
           {subtitle}
         </p>

@@ -51,12 +51,12 @@ export default function AutomationPage() {
             </span>
           </AnimateOnScroll>
           <AnimateOnScroll delay={0.1}>
-            <h1 className="mt-6 font-[family-name:var(--font-display)] text-h1 font-medium text-graphite">
+            <h1 className="mt-6 font-[family-name:var(--font-display)] text-h1 font-medium text-white">
               Sälj medan du sover. Automatisera din uppföljning.
             </h1>
           </AnimateOnScroll>
           <AnimateOnScroll delay={0.2}>
-            <p className="mt-6 text-body-lg text-steel">
+            <p className="mt-6 text-body-lg text-white/60">
               80% av alla affärer kräver 5+ uppföljningar. Vi bygger flödena som
               gör jobbet åt dig, så att inget lead faller mellan stolarna.
             </p>
@@ -77,7 +77,7 @@ export default function AutomationPage() {
         <AnimateOnScroll>
           <div className="mx-auto max-w-3xl">
             <SectionHeading title="Från MQL till SQL utan manuellt arbete" />
-            <p className="mt-6 text-body-lg text-steel leading-relaxed text-center">
+            <p className="mt-6 text-body-lg text-white/60 leading-relaxed text-center">
               När någon konverterar på din sida börjar resan. Vi sätter upp en
               5-stegs mejlserie som utbildar, bygger förtroende och leder fram
               till ett bokat möte.
@@ -96,10 +96,10 @@ export default function AutomationPage() {
                 <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-orange-light">
                   <f.icon className="h-5 w-5 text-orange" />
                 </div>
-                <h3 className="font-[family-name:var(--font-display)] text-lg font-medium text-graphite">
+                <h3 className="font-[family-name:var(--font-display)] text-lg font-medium text-white">
                   {f.title}
                 </h3>
-                <p className="mt-2 text-sm text-steel leading-relaxed">
+                <p className="mt-2 text-sm text-white/60 leading-relaxed">
                   {f.description}
                 </p>
               </Card>

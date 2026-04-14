@@ -2,7 +2,7 @@ import { SITE } from "@/lib/constants";
 
 export function Footer() {
   return (
-    <footer className="bg-graphite text-white">
+    <footer className="bg-white/[0.03] text-white">
       <div
         className="mx-auto"
         style={{

@@ -24,11 +24,11 @@ export default function GuidePage() {
           Gratis guide
         </span>
 
-        <h1 className="text-h1 mt-6 font-[family-name:var(--font-display)] font-medium text-graphite">
+        <h1 className="text-h1 mt-6 font-[family-name:var(--font-display)] font-medium text-white">
           7 beprövade sätt att öka konverteringen och vinna fler affärer
         </h1>
 
-        <p className="text-body-lg mt-4 text-steel">
+        <p className="text-body-lg mt-4 text-white/60">
           Lär dig exakt hur framgångsrika B2B-företag konverterar fler besökare
           till kvalificerade leads – utan att öka sin annonsbudget.
         </p>
@@ -49,7 +49,7 @@ export default function GuidePage() {
           ].map((item) => (
             <li key={item} className="flex gap-3 text-body">
               <Check className="mt-0.5 h-5 w-5 shrink-0 text-success" />
-              <span className="text-steel">{item}</span>
+              <span className="text-white/60">{item}</span>
             </li>
           ))}
         </ul>
@@ -62,7 +62,7 @@ export default function GuidePage() {
               value={name}
               onChange={(e) => setName(e.target.value)}
               required
-              className="w-full rounded-md border border-grey-light px-4 py-3 text-graphite placeholder:text-steel/50 focus:border-orange focus:outline-none focus:ring-2 focus:ring-orange/20"
+              className="w-full rounded-md border border-white/10 bg-white/5 px-4 py-3 text-white placeholder:text-white/30 focus:border-orange focus:outline-none focus:ring-2 focus:ring-orange/20"
             />
             <input
               type="email"
@@ -70,12 +70,12 @@ export default function GuidePage() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className="w-full rounded-md border border-grey-light px-4 py-3 text-graphite placeholder:text-steel/50 focus:border-orange focus:outline-none focus:ring-2 focus:ring-orange/20"
+              className="w-full rounded-md border border-white/10 bg-white/5 px-4 py-3 text-white placeholder:text-white/30 focus:border-orange focus:outline-none focus:ring-2 focus:ring-orange/20"
             />
             <Button fullWidth>Ladda ner guiden gratis</Button>
-            <p className="text-xs text-steel/60">
+            <p className="text-xs text-white/40">
               Vi delar aldrig din e-post. Läs vår{" "}
-              <a href="/integritetspolicy/" className="underline hover:text-steel">
+              <a href="/integritetspolicy/" className="underline hover:text-white/60">
                 integritetspolicy
               </a>
               .
@@ -84,10 +84,10 @@ export default function GuidePage() {
         ) : (
           <div className="mt-10 rounded-lg bg-success/10 border border-success/30 p-8">
             <Check className="mx-auto h-12 w-12 text-success" />
-            <h2 className="text-h3 mt-4 font-semibold text-graphite">
+            <h2 className="text-h3 mt-4 font-semibold text-white">
               Tack! Kolla din inbox.
             </h2>
-            <p className="mt-2 text-body text-steel">
+            <p className="mt-2 text-body text-white/60">
               Vi har skickat guiden till {email}. Kolla skräpposten om du inte
               hittar den.
             </p>

@@ -18,7 +18,7 @@ export function ProcessSection() {
         <img
           src="/hero_image.webp"
           alt="Leadgenereringsprocess – från idealkund till affär"
-          className="mx-auto mb-10 w-full mix-blend-multiply"
+          className="mx-auto mb-10 w-full"
         />
       </AnimateOnScroll>
 
@@ -30,10 +30,10 @@ export function ProcessSection() {
               <span className="mb-2 inline-block text-sm font-bold uppercase tracking-wider text-orange">
                 Steg {step.step}
               </span>
-              <h3 className="text-h3 mb-3 font-semibold text-graphite">
+              <h3 className="text-h3 mb-3 font-semibold text-white">
                 {step.title}
               </h3>
-              <p className="text-body mx-auto max-w-sm text-steel">
+              <p className="text-body mx-auto max-w-sm text-white/60">
                 {step.description}
               </p>
             </div>

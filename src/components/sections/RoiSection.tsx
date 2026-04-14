@@ -20,10 +20,10 @@ export function RoiSection() {
           {ROI_STATS.map((stat, i) => (
             <AnimateOnScroll key={stat.label} delay={i * 0.1}>
               <div className="text-center">
-                <span className="block text-3xl font-extrabold text-graphite whitespace-nowrap lg:text-h2">
+                <span className="block text-3xl font-extrabold text-white whitespace-nowrap lg:text-h2">
                   {stat.value}
                 </span>
-                <span className="mt-1 block text-sm text-steel">
+                <span className="mt-1 block text-sm text-white/60">
                   {stat.label}
                 </span>
               </div>
@@ -33,7 +33,7 @@ export function RoiSection() {
 
         {/* Result box */}
         <AnimateOnScroll delay={0.4}>
-          <div className="mt-10 rounded-lg bg-graphite p-8 text-center text-white">
+          <div className="mt-10 rounded-lg bg-white/[0.03] border border-white/10 p-8 text-center text-white">
             <div className="grid gap-6 sm:grid-cols-4">
               <div>
                 <span className="block text-sm uppercase tracking-wider text-white/50">

@@ -30,9 +30,9 @@ export function ExitIntentModal() {
   if (!triggered) return null;
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-graphite/80 backdrop-blur-md p-4">
+    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-md p-4">
       <div
-        className="relative w-full max-w-5xl overflow-hidden rounded-2xl bg-white-soft"
+        className="relative w-full max-w-5xl overflow-hidden rounded-2xl bg-[#111]"
         style={{
           boxShadow:
             "0 0 60px rgba(255, 106, 61, 0.25), 0 0 120px rgba(255, 106, 61, 0.1), 0 25px 50px rgba(0, 0, 0, 0.25)",
@@ -41,7 +41,7 @@ export function ExitIntentModal() {
         {/* Close button */}
         <button
           onClick={dismiss}
-          className="absolute top-4 right-4 z-10 flex h-8 w-8 items-center justify-center rounded-full border border-grey-light bg-white text-steel transition-colors hover:bg-grey-light hover:text-graphite cursor-pointer"
+          className="absolute top-4 right-4 z-10 flex h-8 w-8 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white/60 transition-colors hover:bg-white/10 hover:text-white cursor-pointer"
           aria-label="Stäng"
         >
           <X className="h-4 w-4" />
@@ -60,23 +60,23 @@ export function ExitIntentModal() {
 
             {/* Right: Content */}
             <div className="lg:col-span-3">
-              <h2 className="font-[family-name:var(--font-display)] text-h3 font-medium text-graphite">
+              <h2 className="font-[family-name:var(--font-display)] text-h3 font-medium text-white">
                 7 beprövade sätt att öka konverteringen och vinna fler affärer
               </h2>
 
-              <p className="mt-4 font-semibold text-graphite">Denna guide ger dig</p>
-              <p className="mt-1 text-sm text-steel">Konkreta verktyg för att:</p>
+              <p className="mt-4 font-semibold text-white">Denna guide ger dig</p>
+              <p className="mt-1 text-sm text-white/60">Konkreta verktyg för att:</p>
 
               <ul className="mt-3 space-y-2">
                 {BENEFITS.map((benefit) => (
-                  <li key={benefit} className="flex items-start gap-2 text-sm text-steel">
+                  <li key={benefit} className="flex items-start gap-2 text-sm text-white/60">
                     <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-orange" />
                     {benefit}
                   </li>
                 ))}
               </ul>
 
-              <p className="mt-5 flex items-start gap-2 rounded-lg bg-orange-light px-4 py-3 text-sm text-graphite">
+              <p className="mt-5 flex items-start gap-2 rounded-lg bg-orange/10 px-4 py-3 text-sm text-white">
                 <span className="flex-shrink-0">💡</span>
                 Kom ihåg: Varje kapitel avslutas med &quot;3 saker du kan göra imorgon&quot; – konkreta åtgärder som ger omedelbar effekt.
               </p>
@@ -89,7 +89,7 @@ export function ExitIntentModal() {
                     placeholder="Din e-postadress"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="flex-1 rounded-md border border-grey-light bg-white px-4 py-3 text-sm text-graphite placeholder:text-steel/50 focus:border-orange focus:outline-none focus:ring-2 focus:ring-orange/20"
+                    className="flex-1 rounded-md border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-white/30 focus:border-orange focus:outline-none focus:ring-2 focus:ring-orange/20"
                   />
                   <button
                     type="submit"
@@ -98,9 +98,9 @@ export function ExitIntentModal() {
                     Hämta guiden
                   </button>
                 </div>
-                <p className="mt-2 text-xs text-steel">
+                <p className="mt-2 text-xs text-white/60">
                   Vi behandlar dina uppgifter enligt vår{" "}
-                  <a href="/integritetspolicy/" className="underline hover:text-graphite">
+                  <a href="/integritetspolicy/" className="underline hover:text-white">
                     integritetspolicy
                   </a>
                   .
@@ -113,10 +113,10 @@ export function ExitIntentModal() {
             <div className="flex h-14 w-14 items-center justify-center rounded-full bg-orange-light">
               <Check className="h-7 w-7 text-orange" />
             </div>
-            <h2 className="mt-4 font-[family-name:var(--font-display)] text-2xl font-medium text-graphite">
+            <h2 className="mt-4 font-[family-name:var(--font-display)] text-2xl font-medium text-white">
               Tack!
             </h2>
-            <p className="mt-2 text-body text-steel">
+            <p className="mt-2 text-body text-white/60">
               Kolla din inbox – guiden är på väg!
             </p>
           </div>

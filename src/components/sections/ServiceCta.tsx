@@ -12,7 +12,7 @@ interface ServiceCtaProps {
 
 export function ServiceCta({ title, subtitle, cta }: ServiceCtaProps) {
   return (
-    <section className="bg-graphite">
+    <section className="bg-white/[0.03]">
       <div
         className="mx-auto text-center"
         style={{

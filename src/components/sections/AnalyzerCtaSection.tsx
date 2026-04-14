@@ -25,10 +25,10 @@ export function AnalyzerCtaSection() {
             <span className="inline-block rounded-full bg-orange-light px-4 py-1.5 text-sm font-medium text-orange">
               Gratis verktyg
             </span>
-            <h2 className="text-h1 mt-6 font-[family-name:var(--font-display)] font-medium text-graphite">
+            <h2 className="text-h1 mt-6 font-[family-name:var(--font-display)] font-medium text-white">
               Testa din webbsidas konverteringsförmåga
             </h2>
-            <p className="text-body-lg mt-4 text-steel">
+            <p className="text-body-lg mt-4 text-white/60">
               Få en obarmhärtig analys av vad som hindrar din webbsida från att
               konvertera besökare till leads.
             </p>
@@ -37,7 +37,7 @@ export function AnalyzerCtaSection() {
 
         <AnimateOnScroll delay={0.1}>
           <Card>
-            <h3 className="mb-4 text-lg font-semibold text-graphite">
+            <h3 className="mb-4 text-lg font-semibold text-white">
               Analysera din webbsidas konverteringsförmåga
             </h3>
             <div className="flex gap-3">
@@ -47,7 +47,7 @@ export function AnalyzerCtaSection() {
                 value={url}
                 onChange={(e) => setUrl(e.target.value)}
                 onKeyDown={(e) => e.key === "Enter" && handleAnalyze()}
-                className="flex-1 rounded-md border border-grey-light px-4 py-3 text-graphite placeholder:text-steel/50 focus:border-orange focus:outline-none focus:ring-2 focus:ring-orange/20"
+                className="flex-1 rounded-md border border-white/10 bg-white/5 px-4 py-3 text-white placeholder:text-white/30 focus:border-orange focus:outline-none focus:ring-2 focus:ring-orange/20"
               />
               <Button onClick={handleAnalyze}>Analysera</Button>
             </div>

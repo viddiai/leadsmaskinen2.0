@@ -13,10 +13,10 @@ export function ServiceTrust() {
           <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-orange-light">
             <ShieldCheck className="h-6 w-6 text-orange" />
           </div>
-          <h2 className="font-[family-name:var(--font-display)] text-h3 font-medium text-graphite">
+          <h2 className="font-[family-name:var(--font-display)] text-h3 font-medium text-white">
             {SERVICE_TRUST.title}
           </h2>
-          <p className="mt-4 text-body-lg text-steel leading-relaxed">
+          <p className="mt-4 text-body-lg text-white/60 leading-relaxed">
             {SERVICE_TRUST.body}
           </p>
         </div>

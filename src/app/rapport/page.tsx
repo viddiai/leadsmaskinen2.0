@@ -36,10 +36,10 @@ function StarRating({ score, size = "md" }: { score: number; size?: "sm" | "md" 
       {Array.from({ length: 5 }).map((_, i) => (
         <Star
           key={i}
-          className={`${starSize} ${i < rounded ? "fill-orange text-orange" : "text-grey-light"}`}
+          className={`${starSize} ${i < rounded ? "fill-orange text-orange" : "text-white/20"}`}
         />
       ))}
-      <span className="ml-1.5 text-sm font-medium text-steel">
+      <span className="ml-1.5 text-sm font-medium text-white/60">
         {score.toFixed(1)}/5
       </span>
     </div>
@@ -68,9 +68,9 @@ function SectionHeader({
       >
         <Icon className={`h-4 w-4 ${iconColor}`} />
       </div>
-      <span className="font-semibold text-graphite">{title}</span>
+      <span className="font-semibold text-white">{title}</span>
       {badge && (
-        <span className="ml-auto text-sm text-steel">{badge}</span>
+        <span className="ml-auto text-sm text-white/60">{badge}</span>
       )}
     </div>
   );
@@ -88,7 +88,7 @@ function ReportContent({ report }: { report: ReportData }) {
         <div className="mb-2">
           <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
             <div>
-              <h1 className="text-h2 font-[family-name:var(--font-display)] font-medium text-graphite">
+              <h1 className="text-h2 font-[family-name:var(--font-display)] font-medium text-white">
                 {report.company_name || "Konverteringsrapport"}
               </h1>
               {report.industry_label && (
@@ -99,7 +99,7 @@ function ReportContent({ report }: { report: ReportData }) {
             </div>
             <StarRating score={report.overall_score} />
           </div>
-          <div className="mt-3 flex flex-wrap gap-x-6 gap-y-1 text-sm text-steel">
+          <div className="mt-3 flex flex-wrap gap-x-6 gap-y-1 text-sm text-white/60">
             <span>
               Analyserad:{" "}
               {new Date(report.created_at).toLocaleDateString("sv-SE")}
@@ -122,11 +122,11 @@ function ReportContent({ report }: { report: ReportData }) {
         <Card>
           <SectionHeader
             icon={FileText}
-            iconBg="bg-white-soft"
-            iconColor="text-steel"
+            iconBg="bg-white/5"
+            iconColor="text-white/60"
             title="Kort beskrivning"
           />
-          <p className="text-sm text-steel leading-relaxed">
+          <p className="text-sm text-white/60 leading-relaxed">
             {report.short_description || report.company_description || "Ingen beskrivning tillgänglig."}
           </p>
         </Card>
@@ -143,7 +143,7 @@ function ReportContent({ report }: { report: ReportData }) {
           />
 
           {report.lead_magnets_analysis && (
-            <p className="mb-4 text-sm text-steel leading-relaxed">
+            <p className="mb-4 text-sm text-white/60 leading-relaxed">
               {report.lead_magnets_analysis}
             </p>
           )}
@@ -151,8 +151,8 @@ function ReportContent({ report }: { report: ReportData }) {
           <ul className="mb-4 space-y-2">
             <li className="flex items-start gap-2 text-sm">
               <Megaphone className="mt-0.5 h-4 w-4 shrink-0 text-orange" />
-              <span className="text-steel">
-                <strong className="text-graphite">Leadmagneter:</strong>{" "}
+              <span className="text-white/60">
+                <strong className="text-white">Leadmagneter:</strong>{" "}
                 {report.lead_magnets?.length || 0} identifierade.{" "}
                 {(report.lead_magnets || [])
                   .slice(0, 3)
@@ -162,15 +162,15 @@ function ReportContent({ report }: { report: ReportData }) {
             </li>
             <li className="flex items-start gap-2 text-sm">
               <FormInput className="mt-0.5 h-4 w-4 shrink-0 text-orange" />
-              <span className="text-steel">
-                <strong className="text-graphite">Formulär:</strong>{" "}
+              <span className="text-white/60">
+                <strong className="text-white">Formulär:</strong>{" "}
                 {report.forms?.length || 0} st identifierade.
               </span>
             </li>
             <li className="flex items-start gap-2 text-sm">
               <MousePointerClick className="mt-0.5 h-4 w-4 shrink-0 text-orange" />
-              <span className="text-steel">
-                <strong className="text-graphite">CTA:</strong>{" "}
+              <span className="text-white/60">
+                <strong className="text-white">CTA:</strong>{" "}
                 {(report.cta_buttons || [])
                   .slice(0, 5)
                   .map((c) => `"${c.text}"`)
@@ -180,12 +180,12 @@ function ReportContent({ report }: { report: ReportData }) {
           </ul>
 
           {report.forms_analysis && (
-            <p className="mb-3 text-sm text-steel leading-relaxed">
+            <p className="mb-3 text-sm text-white/60 leading-relaxed">
               {report.forms_analysis}
             </p>
           )}
           {report.cta_analysis && (
-            <p className="text-sm text-steel leading-relaxed">
+            <p className="text-sm text-white/60 leading-relaxed">
               {report.cta_analysis}
             </p>
           )}
@@ -202,11 +202,11 @@ function ReportContent({ report }: { report: ReportData }) {
             title="Avgörande insikter"
           />
           {report.logical_verdict ? (
-            <div className="space-y-3 text-sm text-steel leading-relaxed whitespace-pre-line">
+            <div className="space-y-3 text-sm text-white/60 leading-relaxed whitespace-pre-line">
               {report.logical_verdict}
             </div>
           ) : (
-            <div className="flex items-center gap-2 text-sm text-steel">
+            <div className="flex items-center gap-2 text-sm text-white/60">
               <Loader2 className="h-4 w-4 animate-spin text-orange" />
               Genererar AI-analys...
             </div>
@@ -220,8 +220,8 @@ function ReportContent({ report }: { report: ReportData }) {
           <Card>
             <SectionHeader
               icon={BarChart3}
-              iconBg="bg-white-soft"
-              iconColor="text-steel"
+              iconBg="bg-white/5"
+              iconColor="text-white/60"
               title="Konverteringsanalys"
             />
 
@@ -229,14 +229,14 @@ function ReportContent({ report }: { report: ReportData }) {
             <div className="max-md:hidden overflow-x-auto">
               <table className="w-full text-left text-sm">
                 <thead>
-                  <tr className="border-b border-grey-light">
-                    <th className="pb-3 font-semibold text-graphite">
+                  <tr className="border-b border-white/10">
+                    <th className="pb-3 font-semibold text-white">
                       Kriterium
                     </th>
-                    <th className="pb-3 font-semibold text-graphite">
+                    <th className="pb-3 font-semibold text-white">
                       Betyg
                     </th>
-                    <th className="pb-3 font-semibold text-graphite">
+                    <th className="pb-3 font-semibold text-white">
                       Förklaring
                     </th>
                   </tr>
@@ -249,15 +249,15 @@ function ReportContent({ report }: { report: ReportData }) {
                     return (
                       <tr
                         key={c.criterion}
-                        className="border-b border-grey-light/50 last:border-0"
+                        className="border-b border-white/10/50 last:border-0"
                       >
-                        <td className="py-3 pr-4 font-medium text-graphite">
+                        <td className="py-3 pr-4 font-medium text-white">
                           {c.criterion_label}
                         </td>
                         <td className="py-3 pr-4">
                           <StarRating score={c.score} size="sm" />
                         </td>
-                        <td className="py-3 text-steel">
+                        <td className="py-3 text-white/60">
                           {aiExplanation}
                         </td>
                       </tr>
@@ -276,15 +276,15 @@ function ReportContent({ report }: { report: ReportData }) {
                 return (
                   <div
                     key={c.criterion}
-                    className="rounded-md border border-grey-light/50 p-4"
+                    className="rounded-md border border-white/10/50 p-4"
                   >
                     <div className="mb-2 flex items-center justify-between">
-                      <span className="font-medium text-graphite text-sm">
+                      <span className="font-medium text-white text-sm">
                         {c.criterion_label}
                       </span>
                     </div>
                     <StarRating score={c.score} size="sm" />
-                    <p className="mt-2 text-sm text-steel">
+                    <p className="mt-2 text-sm text-white/60">
                       {aiExplanation}
                     </p>
                   </div>
@@ -301,8 +301,8 @@ function ReportContent({ report }: { report: ReportData }) {
           <Card>
             <SectionHeader
               icon={ClipboardList}
-              iconBg="bg-white-soft"
-              iconColor="text-steel"
+              iconBg="bg-white/5"
+              iconColor="text-white/60"
               title="Sammanfattande bedömning"
             />
             <ul className="space-y-3">
@@ -312,7 +312,7 @@ function ReportContent({ report }: { report: ReportData }) {
                 .map((line, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-orange" />
-                    <span className="text-sm text-steel leading-relaxed">
+                    <span className="text-sm text-white/60 leading-relaxed">
                       {line.trim()}
                     </span>
                   </li>
@@ -338,7 +338,7 @@ function ReportContent({ report }: { report: ReportData }) {
                   <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-orange text-white text-xs font-bold">
                     {i + 1}
                   </span>
-                  <span className="text-sm text-steel leading-relaxed">
+                  <span className="text-sm text-white/60 leading-relaxed">
                     {rec}
                   </span>
                 </li>
@@ -351,10 +351,10 @@ function ReportContent({ report }: { report: ReportData }) {
       {/* 8. Nästa steg */}
       <AnimateOnScroll delay={0.35}>
         <Card>
-          <h2 className="text-h3 mb-3 font-bold text-graphite">
+          <h2 className="text-h3 mb-3 font-bold text-white">
             Nästa steg
           </h2>
-          <p className="mb-4 text-sm text-steel leading-relaxed">
+          <p className="mb-4 text-sm text-white/60 leading-relaxed">
             Vill du ha hjälp att åtgärda problemen och öka din konvertering?
           </p>
           <Button href="https://calendly.com/stefan-245/30min">
@@ -371,7 +371,7 @@ function ReportContent({ report }: { report: ReportData }) {
             href={pdfUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-md border-2 border-grey-light px-6 py-3 text-sm font-semibold text-steel transition-all hover:border-orange hover:text-graphite"
+            className="inline-flex items-center gap-2 rounded-md border-2 border-white/10 px-6 py-3 text-sm font-semibold text-white/60 transition-all hover:border-orange hover:text-white"
           >
             <Download className="h-4 w-4" />
             Ladda ner som PDF
@@ -380,7 +380,7 @@ function ReportContent({ report }: { report: ReportData }) {
       </AnimateOnScroll>
 
       {/* 10. Footer */}
-      <div className="pt-4 text-center text-sm text-steel/60">
+      <div className="pt-4 text-center text-sm text-white/40">
         <a
           href="/"
           className="text-orange hover:text-orange-hover transition-colors"
@@ -407,7 +407,7 @@ function ReportPageInner() {
         {state === "loading" && (
           <Card className="py-12 text-center">
             <Loader2 className="mx-auto h-10 w-10 animate-spin text-orange" />
-            <p className="mt-4 text-body font-medium text-graphite">
+            <p className="mt-4 text-body font-medium text-white">
               Laddar rapport...
             </p>
           </Card>
@@ -417,10 +417,10 @@ function ReportPageInner() {
         {state === "error" && (
           <Card className="py-12 text-center">
             <AlertTriangle className="mx-auto h-10 w-10 text-red-500" />
-            <p className="mt-4 text-body font-medium text-graphite">
+            <p className="mt-4 text-body font-medium text-white">
               Kunde inte ladda rapporten
             </p>
-            <p className="mt-1 text-sm text-steel">{error}</p>
+            <p className="mt-1 text-sm text-white/60">{error}</p>
             <div className="mt-6">
               <Button href="/konverteringsanalys/">
                 Gör en ny analys
@@ -444,7 +444,7 @@ export default function RapportPage() {
           <div className="mx-auto max-w-3xl">
             <Card className="py-12 text-center">
               <Loader2 className="mx-auto h-10 w-10 animate-spin text-orange" />
-              <p className="mt-4 text-body font-medium text-graphite">
+              <p className="mt-4 text-body font-medium text-white">
                 Laddar rapport...
               </p>
             </Card>

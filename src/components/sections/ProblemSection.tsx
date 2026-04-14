@@ -31,14 +31,14 @@ export function ProblemSection() {
           const Icon = iconMap[problem.icon as keyof typeof iconMap];
           return (
             <AnimateOnScroll key={problem.title} delay={i * 0.1}>
-              <div className="rounded-lg bg-white p-6 shadow-[var(--shadow-card)]">
+              <div className="rounded-lg bg-white/5 border border-white/10 p-6">
                 <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-orange-light">
                   <Icon className="h-6 w-6 text-orange" />
                 </div>
-                <h3 className="text-h3 mb-2 font-semibold text-graphite">
+                <h3 className="text-h3 mb-2 font-semibold text-white">
                   {problem.title}
                 </h3>
-                <p className="text-body text-steel">{problem.description}</p>
+                <p className="text-body text-white/60">{problem.description}</p>
               </div>
             </AnimateOnScroll>
           );
@@ -46,7 +46,7 @@ export function ProblemSection() {
       </div>
 
       <AnimateOnScroll delay={0.4}>
-        <p className="mt-12 text-center text-body-lg font-medium text-graphite">
+        <p className="mt-12 text-center text-body-lg font-medium text-white">
           Det finns en bättre väg.
         </p>
       </AnimateOnScroll>

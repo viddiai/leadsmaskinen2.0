@@ -7,7 +7,7 @@ export function FinalCtaSection() {
   return (
     <section
       id="cta-final"
-      className="relative overflow-hidden bg-graphite"
+      className="relative overflow-hidden bg-white/[0.03]"
       style={{
         paddingTop: "clamp(3rem, 8vw, 7rem)",
         paddingBottom: "clamp(3rem, 8vw, 7rem)",

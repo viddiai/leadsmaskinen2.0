@@ -35,33 +35,33 @@ export function ComparisonSection() {
         <AnimateOnScroll>
           <div className="grid gap-6 md:grid-cols-2">
             {/* Traditionella Byråer */}
-            <div className="rounded-xl border border-grey-light bg-white p-6 shadow-[var(--shadow-card)]">
-              <h3 className="mb-6 text-xl font-bold text-graphite">
+            <div className="rounded-xl border border-white/10 bg-white/5 p-6">
+              <h3 className="mb-6 text-xl font-bold text-white">
                 Traditionella Byråer
               </h3>
               <div className="space-y-4">
                 {AGENCY_CONS.map((item) => (
                   <div key={item} className="flex items-start gap-3">
                     <X className="mt-0.5 h-5 w-5 shrink-0 text-red-400" />
-                    <span className="text-sm text-steel">{item}</span>
+                    <span className="text-sm text-white/60">{item}</span>
                   </div>
                 ))}
               </div>
             </div>
 
             {/* Leadsmaskinen */}
-            <div className="relative rounded-xl border-2 border-orange bg-white p-6 shadow-[var(--shadow-card-hover)]">
+            <div className="relative rounded-xl border-2 border-orange bg-white/5 p-6">
               <div className="absolute -right-3 -top-3 flex h-8 w-8 items-center justify-center rounded-full bg-success text-white shadow-md">
                 <Check className="h-4 w-4" />
               </div>
-              <h3 className="mb-6 text-xl font-bold text-graphite">
+              <h3 className="mb-6 text-xl font-bold text-white">
                 Leadsmaskinen
               </h3>
               <div className="space-y-4">
                 {LM_PROS.map((item) => (
                   <div key={item} className="flex items-start gap-3">
                     <Check className="mt-0.5 h-5 w-5 shrink-0 text-success" />
-                    <span className="text-sm font-medium text-graphite">{item}</span>
+                    <span className="text-sm font-medium text-white">{item}</span>
                   </div>
                 ))}
               </div>

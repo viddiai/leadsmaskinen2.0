@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 @theme {
-  /* Brand Colors */
+  /* Brand Colors — dark theme */
   --color-orange: #FF6A3D;
   --color-orange-hover: #E85A2D;
-  --color-orange-light: #FFF0EB;
-  --color-graphite: #2B2F33;
-  --color-steel: #6E7378;
-  --color-white-soft: #FAFAFA;
-  --color-grey-light: #E7E7E7;
+  --color-orange-light: rgba(255, 106, 61, 0.1);
+  --color-graphite: #ffffff;
+  --color-steel: rgba(255, 255, 255, 0.6);
+  --color-white-soft: rgba(255, 255, 255, 0.03);
+  --color-grey-light: rgba(255, 255, 255, 0.1);
   --color-success: #2ECC71;
   --color-warning: #F4D03F;
   --color-info: #3498DB;
@@ -19,8 +19,8 @@
   --font-mono: "JetBrains Mono", monospace;
 
   /* Shadows */
-  --shadow-card: 0 2px 12px rgba(0, 0, 0, 0.06);
-  --shadow-card-hover: 0 8px 30px rgba(0, 0, 0, 0.1);
+  --shadow-card: 0 2px 12px rgba(0, 0, 0, 0.3);
+  --shadow-card-hover: 0 8px 30px rgba(0, 0, 0, 0.5);
 
   /* Layout */
   --max-w-content: 1200px;
@@ -33,29 +33,34 @@ html {
 
 body {
   font-family: var(--font-body);
-  color: var(--color-graphite);
-  background-color: #ffffff;
+  color: rgba(255, 255, 255, 0.9);
+  background-color: #000000;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: rgba(255, 106, 61, 0.2);
+  color: #fff;
 }
 
 /* Fluid typography utilities */
 .text-hero {
   font-size: clamp(2.025rem, 4.5vw, 4.05rem);
   line-height: 1.1;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
 }
 
 .text-h1 {
   font-size: clamp(2rem, 4vw, 3.5rem);
   line-height: 1.15;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
 }
 
 .text-h2 {
   font-size: clamp(1.75rem, 3.5vw, 2.75rem);
   line-height: 1.2;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
 }
 
 .text-h3 {

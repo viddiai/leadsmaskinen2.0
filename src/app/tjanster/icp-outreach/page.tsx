@@ -50,12 +50,12 @@ export default function IcpOutreachPage() {
             </span>
           </AnimateOnScroll>
           <AnimateOnScroll delay={0.1}>
-            <h1 className="mt-6 font-[family-name:var(--font-display)] text-h1 font-medium text-graphite">
+            <h1 className="mt-6 font-[family-name:var(--font-display)] text-h1 font-medium text-white">
               Sluta gissa. Börja träffa rätt beslutsfattare.
             </h1>
           </AnimateOnScroll>
           <AnimateOnScroll delay={0.2}>
-            <p className="mt-6 text-body-lg text-steel">
+            <p className="mt-6 text-body-lg text-white/60">
               Vi identifierar din idealkund (ICP) och bygger en automatiserad
               outreach-motor som öppnar dörrar hos företagen du faktiskt vill
               jobba med.
@@ -78,7 +78,7 @@ export default function IcpOutreachPage() {
             <SectionHeading
               title="Varför de flesta outreach-kampanjer misslyckas"
             />
-            <p className="mt-6 text-body-lg text-steel leading-relaxed text-center">
+            <p className="mt-6 text-body-lg text-white/60 leading-relaxed text-center">
               De flesta skickar generiska meddelanden till för breda listor.
               Resultatet? Låg svarsfrekvens och brända domäner. Vi gör tvärtom.
               Vi börjar med en djupdykning i din ICP för att förstå deras
@@ -101,10 +101,10 @@ export default function IcpOutreachPage() {
                 <span className="text-xs font-semibold uppercase tracking-wider text-orange">
                   Steg {s.step}
                 </span>
-                <h3 className="mt-2 font-[family-name:var(--font-display)] text-lg font-medium text-graphite">
+                <h3 className="mt-2 font-[family-name:var(--font-display)] text-lg font-medium text-white">
                   {s.title}
                 </h3>
-                <p className="mt-2 text-sm text-steel leading-relaxed">
+                <p className="mt-2 text-sm text-white/60 leading-relaxed">
                   {s.description}
                 </p>
               </Card>

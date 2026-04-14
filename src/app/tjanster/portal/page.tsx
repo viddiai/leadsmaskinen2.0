@@ -56,12 +56,12 @@ export default function PortalPage() {
             </span>
           </AnimateOnScroll>
           <AnimateOnScroll delay={0.1}>
-            <h1 className="mt-6 font-[family-name:var(--font-display)] text-h1 font-medium text-graphite">
+            <h1 className="mt-6 font-[family-name:var(--font-display)] text-h1 font-medium text-white">
               Bli den självklara auktoriteten i din nisch med en egen portal.
             </h1>
           </AnimateOnScroll>
           <AnimateOnScroll delay={0.2}>
-            <p className="mt-6 text-body-lg text-steel">
+            <p className="mt-6 text-body-lg text-white/60">
               En komplett leadmotor med 5+ konverteringspunkter som utbildar din
               målgrupp och driver dem mot ett bokat möte.
             </p>
@@ -82,7 +82,7 @@ export default function PortalPage() {
         <AnimateOnScroll>
           <div className="mx-auto max-w-3xl">
             <SectionHeading title="Ge värde först, sälj sen" />
-            <p className="mt-6 text-body-lg text-steel leading-relaxed text-center">
+            <p className="mt-6 text-body-lg text-white/60 leading-relaxed text-center">
               En portal är mer än en hemsida. Det är ett verktyg. Genom att
               erbjuda ROI-kalkylatorer, quiz och nischade guider får du
               besökaren att stanna längre, återkomma oftare och lita på din
@@ -102,10 +102,10 @@ export default function PortalPage() {
                 <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-orange-light">
                   <part.icon className="h-5 w-5 text-orange" />
                 </div>
-                <h3 className="font-[family-name:var(--font-display)] text-lg font-medium text-graphite">
+                <h3 className="font-[family-name:var(--font-display)] text-lg font-medium text-white">
                   {part.title}
                 </h3>
-                <p className="mt-2 text-sm text-steel leading-relaxed">
+                <p className="mt-2 text-sm text-white/60 leading-relaxed">
                   {part.description}
                 </p>
               </Card>

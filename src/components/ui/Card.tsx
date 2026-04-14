@@ -11,10 +11,10 @@ export function Card({
 }: CardProps) {
   return (
     <div
-      className={`rounded-lg border p-6 transition-shadow duration-200 md:p-8 ${
+      className={`rounded-2xl border p-6 transition-colors duration-200 md:p-8 ${
         highlighted
-          ? "border-orange bg-white shadow-[var(--shadow-card-hover)]"
-          : "border-grey-light bg-white shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-card-hover)]"
+          ? "border-orange/30 bg-orange/5 shadow-[0_0_50px_-20px_rgba(255,106,61,0.1)]"
+          : "border-white/10 bg-white/5 hover:bg-white/[0.07]"
       } ${className}`}
     >
       {children}

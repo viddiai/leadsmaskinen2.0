@@ -28,18 +28,18 @@ function PricingCard({
           <span className="text-sm font-semibold uppercase tracking-wider text-orange">
             {pkg.label}
           </span>
-          <h3 className="text-h3 mt-1 font-bold text-graphite">{pkg.name}</h3>
+          <h3 className="text-h3 mt-1 font-bold text-white">{pkg.name}</h3>
         </div>
 
         <div className="mb-6">
-          <span className="text-h1 font-extrabold text-graphite">
+          <span className="text-h1 font-extrabold text-white">
             {pkg.price}
           </span>
-          <span className="ml-1 text-steel">{pkg.unit}</span>
-          <p className="mt-1 text-sm text-steel">{pkg.priceNote}</p>
+          <span className="ml-1 text-white/60">{pkg.unit}</span>
+          <p className="mt-1 text-sm text-white/60">{pkg.priceNote}</p>
         </div>
 
-        <div className="mb-6 flex items-center gap-2 text-sm text-steel">
+        <div className="mb-6 flex items-center gap-2 text-sm text-white/60">
           <Clock className="h-4 w-4" />
           <span>Leverans: {pkg.delivery}</span>
         </div>
@@ -48,7 +48,7 @@ function PricingCard({
           {pkg.features.map((feature) => (
             <li key={feature} className="flex gap-3 text-body">
               <Check className="mt-0.5 h-5 w-5 shrink-0 text-success" />
-              <span className="text-steel">{feature}</span>
+              <span className="text-white/60">{feature}</span>
             </li>
           ))}
         </ul>
@@ -82,9 +82,9 @@ export function PackagesSection() {
       </div>
 
       <AnimateOnScroll delay={0.3}>
-        <div className="mx-auto mt-10 max-w-2xl rounded-lg border border-grey-light bg-white p-6 text-center">
-          <p className="text-body text-steel">
-            <span className="font-semibold text-graphite">
+        <div className="mx-auto mt-10 max-w-2xl rounded-lg border border-white/10 bg-white/5 p-6 text-center">
+          <p className="text-body text-white/60">
+            <span className="font-semibold text-white">
               Inte redo för ett helt paket?
             </span>{" "}
             Starta med en fristående ICP Persona Workshop – 7 500 kr (avräknas om

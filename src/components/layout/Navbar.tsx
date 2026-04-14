@@ -61,10 +61,10 @@ export function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-200 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-200 border-b ${
         isScrolled || isMobileOpen
-          ? "bg-white/95 shadow-sm backdrop-blur-sm"
-          : "bg-transparent"
+          ? "bg-black/50 backdrop-blur-xl border-white/5"
+          : "bg-transparent border-transparent"
       }`}
     >
       <nav
@@ -77,9 +77,7 @@ export function Navbar() {
         {/* Logo */}
         <a
           href="/"
-          className={`flex items-center gap-2 font-[family-name:var(--font-display)] text-xl font-bold transition-colors ${
-            lightNav ? "text-white" : "text-graphite"
-          }`}
+          className="flex items-center gap-2 font-[family-name:var(--font-display)] text-xl font-bold text-white transition-colors"
         >
           <img src="/logo_circle.png" alt="" className="h-8 w-auto" />
           <span>Leads<span className="text-orange">maskinen</span></span>
@@ -96,7 +94,7 @@ export function Navbar() {
           >
             <button
               className={`flex items-center gap-1 text-sm font-medium transition-colors cursor-pointer ${
-                lightNav ? "text-slate-300 hover:text-white" : "text-steel hover:text-graphite"
+"text-white/60 hover:text-white"
               }`}
               onClick={() => setIsServicesOpen(!isServicesOpen)}
             >
@@ -108,12 +106,12 @@ export function Navbar() {
 
             {isServicesOpen && (
               <div className="absolute left-1/2 top-full z-50 w-56 -translate-x-1/2 pt-2">
-              <div className="rounded-lg border border-grey-light bg-white py-2 shadow-[var(--shadow-card-hover)]">
+              <div className="rounded-lg border border-white/10 bg-black/90 backdrop-blur-xl py-2 shadow-[var(--shadow-card-hover)]">
                 {SERVICE_NAV_LINKS.map((link) => (
                   <a
                     key={link.href}
                     href={link.href}
-                    className="block px-4 py-2.5 text-sm text-steel transition-colors hover:bg-white-soft hover:text-graphite"
+                    className="block px-4 py-2.5 text-sm text-white/60 transition-colors hover:bg-white/5 hover:text-white"
                   >
                     {link.label}
                   </a>
@@ -165,21 +163,21 @@ export function Navbar() {
           aria-label="Toggle menu"
         >
           {isMobileOpen ? (
-            <X className={`h-6 w-6 ${lightNav ? "text-white" : "text-graphite"}`} />
+            <X className="h-6 w-6 text-white" />
           ) : (
-            <Menu className={`h-6 w-6 ${lightNav ? "text-white" : "text-graphite"}`} />
+            <Menu className="h-6 w-6 text-white" />
           )}
         </button>
       </nav>
 
       {/* Mobile Menu */}
       {isMobileOpen && (
-        <div className="bg-white border-t border-grey-light lg:hidden">
+        <div className="bg-black/95 backdrop-blur-xl border-t border-white/5 lg:hidden">
           <div className="flex flex-col gap-4 p-6">
             {/* Tjänster expandable */}
             <div>
               <button
-                className="flex w-full items-center justify-between text-base font-medium text-steel hover:text-graphite cursor-pointer"
+                className="flex w-full items-center justify-between text-base font-medium text-white/60 hover:text-white cursor-pointer"
                 onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
               >
                 Tjänster
@@ -194,7 +192,7 @@ export function Navbar() {
                       key={link.href}
                       href={link.href}
                       onClick={() => setIsMobileOpen(false)}
-                      className="text-sm text-steel hover:text-graphite"
+                      className="text-sm text-white/60 hover:text-white"
                     >
                       {link.label}
                     </a>
@@ -206,7 +204,7 @@ export function Navbar() {
             <a
               href="/kalkylator/"
               onClick={() => setIsMobileOpen(false)}
-              className="text-base font-medium text-steel hover:text-graphite"
+              className="text-base font-medium text-white/60 hover:text-white"
             >
               Kalkylator
             </a>
@@ -216,7 +214,7 @@ export function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsMobileOpen(false)}
-                className="text-base font-medium text-steel hover:text-graphite"
+                className="text-base font-medium text-white/60 hover:text-white"
               >
                 {link.label}
               </a>

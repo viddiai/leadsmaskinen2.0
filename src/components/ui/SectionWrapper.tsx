@@ -6,9 +6,9 @@ interface SectionWrapperProps {
 }
 
 const bgStyles = {
-  white: "bg-white",
-  soft: "bg-white-soft",
-  gradient: "bg-gradient-to-b from-white-soft to-white",
+  white: "bg-transparent",
+  soft: "bg-white/[0.02]",
+  gradient: "bg-white/[0.01]",
 };
 
 export function SectionWrapper({

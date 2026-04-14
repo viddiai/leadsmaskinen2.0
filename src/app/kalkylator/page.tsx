@@ -21,10 +21,10 @@ const fmtPct = (n: number) => `${fmt(n)} %`;
 function Tooltip({ text }: { text: string }) {
   return (
     <span className="group relative ml-1 inline-flex cursor-help">
-      <Info className="h-4 w-4 text-steel/50" />
-      <span className="pointer-events-none absolute bottom-full left-1/2 z-10 mb-2 w-56 -translate-x-1/2 rounded-lg bg-graphite px-3 py-2 text-xs leading-relaxed text-white opacity-0 shadow-lg transition-opacity group-hover:opacity-100">
+      <Info className="h-4 w-4 text-white/30" />
+      <span className="pointer-events-none absolute bottom-full left-1/2 z-10 mb-2 w-56 -translate-x-1/2 rounded-lg bg-white/10 px-3 py-2 text-xs leading-relaxed text-white opacity-0 shadow-lg transition-opacity group-hover:opacity-100">
         {text}
-        <span className="absolute left-1/2 top-full -translate-x-1/2 border-4 border-transparent border-t-graphite" />
+        <span className="absolute left-1/2 top-full -translate-x-1/2 border-4 border-transparent border-t-white/10" />
       </span>
     </span>
   );
@@ -74,13 +74,13 @@ function InputField({
 
   return (
     <div>
-      <label className="mb-1.5 flex items-center text-sm font-medium text-graphite">
+      <label className="mb-1.5 flex items-center text-sm font-medium text-white">
         {label}
-        {suffix && <span className="ml-1 text-steel/60">({suffix})</span>}
+        {suffix && <span className="ml-1 text-white/40">({suffix})</span>}
         {tooltip && <Tooltip text={tooltip} />}
       </label>
       {readOnly ? (
-        <div className="rounded-md border border-grey-light bg-white-soft px-4 py-2.5 text-base font-semibold text-graphite">
+        <div className="rounded-md border border-white/10 bg-white/5 px-4 py-2.5 text-base font-semibold text-white">
           {fmt(value)} {suffix === "kr" ? "kr" : suffix === "%" ? "%" : "st"}
         </div>
       ) : (
@@ -91,7 +91,7 @@ function InputField({
           onFocus={() => setFocused(true)}
           onBlur={handleBlur}
           onChange={handleChange}
-          className="w-full rounded-md border border-grey-light px-4 py-2.5 text-graphite placeholder:text-steel/50 focus:border-orange focus:outline-none focus:ring-2 focus:ring-orange/20"
+          className="w-full rounded-md border border-white/10 bg-white/5 px-4 py-2.5 text-white placeholder:text-white/30 focus:border-orange focus:outline-none focus:ring-2 focus:ring-orange/20"
         />
       )}
     </div>
@@ -109,25 +109,25 @@ function ResultCard({
   variant?: "default" | "blue" | "green" | "green-dark" | "orange" | "yellow" | "light";
 }) {
   const styles = {
-    default: "border-grey-light bg-white-soft",
+    default: "border-white/10 bg-white/5",
     blue: "border-blue-200 bg-blue-600 text-white",
-    green: "border-green-200 bg-green-50",
-    "green-dark": "border-green-300 bg-green-100",
-    orange: "border-orange/30 bg-orange-light",
-    yellow: "border-yellow-200 bg-yellow-50",
-    light: "border-grey-light bg-gray-50",
+    green: "border-green-900 bg-green-950",
+    "green-dark": "border-green-800 bg-green-900",
+    orange: "border-orange/30 bg-orange/10",
+    yellow: "border-yellow-900 bg-yellow-950",
+    light: "border-white/10 bg-white/[0.03]",
   };
 
   const labelColor =
-    variant === "blue" ? "text-blue-100" : "text-steel";
+    variant === "blue" ? "text-blue-100" : "text-white/60";
   const valueColor =
     variant === "blue"
       ? "text-white"
       : variant === "green" || variant === "green-dark"
-        ? "text-green-700"
+        ? "text-green-400"
         : variant === "orange"
           ? "text-orange"
-          : "text-graphite";
+          : "text-white";
 
   return (
     <div className={`rounded-lg border px-4 py-3 ${styles[variant]}`}>
@@ -227,10 +227,10 @@ export default function KalkylatorPage() {
           <span className="inline-block rounded-full bg-orange-light px-4 py-1.5 text-sm font-medium text-orange">
             ROI-kalkylator
           </span>
-          <h1 className="text-h2 mt-4 font-[family-name:var(--font-display)] font-medium text-graphite">
+          <h1 className="text-h2 mt-4 font-[family-name:var(--font-display)] font-medium text-white">
             Beräkna din ROI
           </h1>
-          <p className="text-body mt-3 font-light text-steel font-[family-name:var(--font-display)]">
+          <p className="text-body mt-3 font-light text-white/60 font-[family-name:var(--font-display)]">
             Fyll i värdena för att se estimerad besparing, försäljning, nettovinst och ROI.
           </p>
         </div>
@@ -248,11 +248,11 @@ export default function KalkylatorPage() {
           ].flatMap((item, i, arr) => {
             const circle = (
               <div key={item.step} className="flex flex-col items-center">
-                <div className="flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full border-2 border-orange bg-white text-xs sm:text-sm font-bold text-orange shadow-sm">
+                <div className="flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full border-2 border-orange bg-white/5 text-xs sm:text-sm font-bold text-orange shadow-sm">
                   {item.step}
                 </div>
-                <span className="mt-2 text-center text-[10px] sm:text-xs font-semibold text-graphite" style={{ maxWidth: 100 }}>{item.label}</span>
-                <span className="text-xs text-steel">{item.value}</span>
+                <span className="mt-2 text-center text-[10px] sm:text-xs font-semibold text-white" style={{ maxWidth: 100 }}>{item.label}</span>
+                <span className="text-xs text-white/60">{item.value}</span>
               </div>
             );
             if (i < arr.length - 1) {
@@ -277,8 +277,8 @@ export default function KalkylatorPage() {
         {/* ── Column 1: Säljarkostnadskalkyl ── */}
         <AnimateOnScroll delay={0}>
           <Card className="h-full">
-            <h2 className="text-h3 font-bold text-graphite">Säljarkostnadskalkyl</h2>
-            <p className="mb-6 text-sm text-steel">Vad kostar din säljkår på prospektering?</p>
+            <h2 className="text-h3 font-bold text-white">Säljarkostnadskalkyl</h2>
+            <p className="mb-6 text-sm text-white/60">Vad kostar din säljkår på prospektering?</p>
 
             <div className="space-y-4">
               <InputField
@@ -302,7 +302,7 @@ export default function KalkylatorPage() {
                 tooltip="Typiskt 8–16 timmar/vecka (20–40 % av arbetstiden) för B2B-säljare."
               />
               <div>
-                <label className="mb-1.5 flex items-center text-sm font-medium text-graphite">
+                <label className="mb-1.5 flex items-center text-sm font-medium text-white">
                   Ineffektiv andel prospekteringstid (fel ICP / dålig data)
                   <Tooltip text="Analyser visar att upp till 50 % av prospekteringstiden är ineffektiv p.g.a. dålig data eller fel målgrupp." />
                 </label>
@@ -327,7 +327,7 @@ export default function KalkylatorPage() {
                 </div>
               </div>
 
-              <hr className="border-grey-light" />
+              <hr className="border-white/10" />
 
               <ResultCard
                 label="Prospekteringstimmar per år (totalt team)"
@@ -338,20 +338,20 @@ export default function KalkylatorPage() {
                 value={fmtKr(calc.totalProspectingCost)}
                 variant="orange"
               />
-              <div className="rounded-lg border border-orange/30 bg-orange-light px-4 py-3">
-                <p className="text-xs font-medium text-steel">
+              <div className="rounded-lg border border-orange/30 bg-orange/10 px-4 py-3">
+                <p className="text-xs font-medium text-white/60">
                   varav ineffektiv tid ({fmt(inefficiencyPct)} %)
                 </p>
                 <p className="text-lg font-bold text-orange">{fmtKr(calc.inefficientCost)}</p>
-                <p className="mt-0.5 text-[10px] text-steel/70">
+                <p className="mt-0.5 text-[10px] text-white/40">
                   = pengar du bränner på fel prospekt och dålig data
                 </p>
               </div>
-              <div className="rounded-lg border border-blue-100 bg-blue-50/50 px-4 py-3">
-                <p className="text-xs font-semibold text-blue-800">
+              <div className="rounded-lg border border-blue-800 bg-blue-950/50 px-4 py-3">
+                <p className="text-xs font-semibold text-blue-300">
                   Varför försvinner denna kostnad med Leadsmaskinen?
                 </p>
-                <p className="mt-1.5 text-xs leading-relaxed text-blue-900/70">
+                <p className="mt-1.5 text-xs leading-relaxed text-blue-200/70">
                   Istället för att dina säljare lägger tid på kall prospektering mot fel målgrupper
                   bygger vi en ICP/Persona-styrd outreach som riktar sig till exakt rätt beslutsfattare.
                   Det innebär att din pipeline fylls med högkvalitativa, förkvalificerade leads —
@@ -365,8 +365,8 @@ export default function KalkylatorPage() {
         {/* ── Column 2: Indata ── */}
         <AnimateOnScroll delay={0.1}>
           <Card className="h-full">
-            <h2 className="text-h3 font-bold text-graphite">Indata</h2>
-            <p className="mb-6 text-sm text-steel">Ange dina värden nedan</p>
+            <h2 className="text-h3 font-bold text-white">Indata</h2>
+            <p className="mb-6 text-sm text-white/60">Ange dina värden nedan</p>
 
             <div className="space-y-4">
               <InputField
@@ -404,7 +404,7 @@ export default function KalkylatorPage() {
                 tooltip="Procentuell provision du betalar på varje avslutad affär."
               />
 
-              <hr className="border-grey-light" />
+              <hr className="border-white/10" />
 
               <InputField
                 label="Outreach – Kontaktade via e-post"
@@ -426,7 +426,7 @@ export default function KalkylatorPage() {
                 readOnly
               />
 
-              <hr className="border-grey-light" />
+              <hr className="border-white/10" />
 
               <InputField
                 label="Andel MQL-leads"
@@ -463,8 +463,8 @@ export default function KalkylatorPage() {
         {/* ── Column 3: Direktberäkningar + LTV ── */}
         <AnimateOnScroll delay={0.2}>
           <Card className="h-full">
-            <h2 className="text-h3 font-bold text-graphite">Direktberäkningar</h2>
-            <p className="mb-6 text-sm text-steel">Resultaten uppdateras i realtid</p>
+            <h2 className="text-h3 font-bold text-white">Direktberäkningar</h2>
+            <p className="mb-6 text-sm text-white/60">Resultaten uppdateras i realtid</p>
 
             <div className="space-y-3">
               <div className="grid grid-cols-2 gap-3">
@@ -520,23 +520,23 @@ export default function KalkylatorPage() {
               />
 
               {/* Nettovinst — extra framhävd */}
-              <div className="relative overflow-hidden rounded-xl border-2 border-green-400 bg-gradient-to-br from-green-50 to-green-100 px-5 py-5 shadow-lg">
-                <div className="absolute -right-4 -top-4 h-24 w-24 rounded-full bg-green-200/30" />
-                <div className="absolute -bottom-2 -left-2 h-16 w-16 rounded-full bg-green-200/20" />
-                <p className="relative text-xs font-semibold uppercase tracking-wider text-green-600">
+              <div className="relative overflow-hidden rounded-xl border-2 border-green-700 bg-gradient-to-br from-green-950 to-green-900 px-5 py-5 shadow-lg">
+                <div className="absolute -right-4 -top-4 h-24 w-24 rounded-full bg-green-800/30" />
+                <div className="absolute -bottom-2 -left-2 h-16 w-16 rounded-full bg-green-800/20" />
+                <p className="relative text-xs font-semibold uppercase tracking-wider text-green-400">
                   Nettovinst
                 </p>
-                <p className="relative mt-1 text-3xl font-extrabold text-green-700">
+                <p className="relative mt-1 text-3xl font-extrabold text-green-300">
                   {fmtKr(calc.netProfit)}
                 </p>
-                <p className="relative mt-1 text-[10px] text-green-600/70">
+                <p className="relative mt-1 text-[10px] text-green-400/70">
                   Marginal − provisioner − investering + besparing
                 </p>
               </div>
 
               {/* LTV / ROI */}
-              <hr className="border-grey-light" />
-              <h3 className="text-sm font-semibold uppercase tracking-wider text-steel">
+              <hr className="border-white/10" />
+              <h3 className="text-sm font-semibold uppercase tracking-wider text-white/60">
                 Livstidsvärde
               </h3>
 
@@ -547,17 +547,17 @@ export default function KalkylatorPage() {
               />
 
               <div>
-                <p className="mb-1.5 text-sm font-medium text-steel">LTV (Värde)</p>
-                <p className="text-2xl font-bold text-graphite">{fmtKr(calc.ltvValue)}</p>
+                <p className="mb-1.5 text-sm font-medium text-white/60">LTV (Värde)</p>
+                <p className="text-2xl font-bold text-white">{fmtKr(calc.ltvValue)}</p>
               </div>
               <div>
-                <p className="mb-1.5 text-sm font-medium text-steel">ROI (kr)</p>
+                <p className="mb-1.5 text-sm font-medium text-white/60">ROI (kr)</p>
                 <p className={`text-2xl font-bold ${calc.roiKr >= 0 ? "text-green-600" : "text-red-500"}`}>
                   {fmtKr(calc.roiKr)}
                 </p>
               </div>
               <div>
-                <p className="mb-1.5 text-sm font-medium text-steel">ROI (%)</p>
+                <p className="mb-1.5 text-sm font-medium text-white/60">ROI (%)</p>
                 <p className={`text-2xl font-bold ${calc.roiPct >= 100 ? "text-green-600" : "text-orange"}`}>
                   {fmtPct(calc.roiPct)}
                 </p>

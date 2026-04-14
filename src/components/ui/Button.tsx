@@ -18,10 +18,10 @@ interface ButtonProps {
 
 const variantStyles: Record<ButtonVariant, string> = {
   primary:
-    "bg-orange text-white hover:bg-orange-hover shadow-md hover:shadow-lg",
+    "bg-white text-black hover:bg-orange hover:text-white hover:scale-105 active:scale-95 shadow-md",
   secondary:
     "border-2 border-orange text-orange hover:bg-orange hover:text-white",
-  ghost: "text-steel hover:text-graphite",
+  ghost: "text-white/60 hover:text-white",
 };
 
 const sizeStyles: Record<ButtonSize, string> = {
@@ -41,7 +41,7 @@ export function Button({
   className = "",
 }: ButtonProps) {
   const baseStyles =
-    "inline-flex items-center justify-center font-semibold uppercase tracking-wider rounded-md transition-all duration-150 ease-in-out";
+    "inline-flex items-center justify-center font-semibold uppercase tracking-wider rounded-full transition-all duration-150 ease-in-out";
   const disabledStyles = disabled ? "opacity-50 cursor-not-allowed" : "cursor-pointer";
   const styles = `${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${disabledStyles} ${fullWidth ? "w-full" : ""} ${className}`;
 
