@@ -357,9 +357,9 @@ export function HeroSection() {
               margin: "20px 0 32px 0", maxWidth: "480px",
             }}
           >
-            Vi bygger en komplett lead-motor som automatiserar hela flödet
-            från rätt kontakt → uppvärmt intresse → bokat möte (SQL), med
-            pay-per-lead.
+            Vi sköter hela kedjan från prospekt till bokat möte. Ni betalar
+            bara för faktiska resultat – vilket gör att ni aldrig kan gå back
+            på samarbetet.
           </p>
 
           <div className="flex flex-wrap gap-2 mt-7">
