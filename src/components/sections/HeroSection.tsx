@@ -335,18 +335,18 @@ export function HeroSection() {
               margin: "0 0 8px 0", letterSpacing: "-1.5px",
             }}
           >
-            Sales Infrastructure som ersätter prospektering
+            Automatisera er prospektering – få bokade möten på löpande band.
           </h1>
 
           <h2
             className="font-[family-name:var(--font-display)]"
             style={{
-              fontSize: "clamp(1.5rem, 3vw, 36px)",
-              fontWeight: 700, lineHeight: 1.08,
-              margin: 0, letterSpacing: "-0.5px",
+              fontSize: "clamp(1.25rem, 2.2vw, 24px)",
+              fontWeight: 700, lineHeight: 1.35,
+              margin: 0, letterSpacing: "-0.2px",
             }}
           >
-            <span className="hero-shimmer">Idealkunder in. Affärer ut.</span>
+            <span className="hero-shimmer">Vi ersätter manuellt listbyggande och kall outreach med intelligent automation. Ni betalar bara för resultat.</span>
           </h2>
 
           <p
