@@ -16,11 +16,11 @@ export const NAV_LINKS = [
 ] as const;
 
 export const HERO = {
-  title: "Sluta prospektera. Börja stänga.",
+  title: "Automatisera er prospektering – få bokade möten på löpande band.",
+  tagline: "Vi ersätter manuellt listbyggande och kall outreach med intelligent automation. Ni betalar bara för resultat.",
   subtitle:
-    "Vi bygger er säljmaskin och levererar färdigbokade möten direkt i kalendern. Sänk era möteskostnader och frigör 40 % av säljarnas tid.",
-  cta: "Räkna på er ROI här",
-  ctaHref: "/kalkylator",
+    "Vi sköter hela kedjan från prospekt till bokat möte. Ni betalar bara för faktiska resultat – vilket gör att ni aldrig kan gå back på samarbetet.",
+  cta: "Boka konsultation: få fler kvalificerade leads",
 } as const;
 
 export const PROBLEMS = [
