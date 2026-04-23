@@ -19,36 +19,29 @@ const COLORS = {
 function GridBackground() {
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
-      {/* Gradient mesh */}
+      {/* Single warm radial — subtle */}
       <div
-        className="absolute blur-[80px]"
+        className="absolute blur-[100px]"
         style={{
-          top: "-20%", right: "-10%", width: "60%", height: "60%",
+          top: "-15%", right: "-5%", width: "55%", height: "55%",
           background: `radial-gradient(ellipse at center, ${COLORS.accentSoft} 0%, transparent 70%)`,
         }}
       />
-      <div
-        className="absolute blur-[60px]"
-        style={{
-          bottom: "-10%", left: "-5%", width: "40%", height: "50%",
-          background: "radial-gradient(ellipse at center, rgba(59, 130, 246, 0.05) 0%, transparent 70%)",
-        }}
-      />
-      {/* Grid lines */}
-      <svg width="100%" height="100%" className="absolute inset-0 opacity-30">
+      {/* Grid lines — quieter */}
+      <svg width="100%" height="100%" className="absolute inset-0 opacity-[0.12]">
         <defs>
-          <pattern id="hero-grid" width="60" height="60" patternUnits="userSpaceOnUse">
-            <path d="M 60 0 L 0 0 0 60" fill="none" stroke={COLORS.line} strokeWidth="0.5" />
+          <pattern id="hero-grid" width="72" height="72" patternUnits="userSpaceOnUse">
+            <path d="M 72 0 L 0 0 0 72" fill="none" stroke={COLORS.line} strokeWidth="0.5" />
           </pattern>
         </defs>
         <rect width="100%" height="100%" fill="url(#hero-grid)" />
       </svg>
-      {/* Fade edges */}
+      {/* Fade edges — extended */}
       <div
         className="absolute inset-0"
         style={{
-          background: `linear-gradient(to right, ${COLORS.bg} 0%, transparent 15%, transparent 85%, ${COLORS.bg} 100%),
-                        linear-gradient(to bottom, ${COLORS.bg} 0%, transparent 20%, transparent 80%, ${COLORS.bg} 100%)`,
+          background: `linear-gradient(to right, ${COLORS.bg} 0%, transparent 18%, transparent 82%, ${COLORS.bg} 100%),
+                        linear-gradient(to bottom, ${COLORS.bg} 0%, transparent 22%, transparent 78%, ${COLORS.bg} 100%)`,
         }}
       />
     </div>
@@ -299,40 +292,40 @@ export function HeroSection() {
     <section
       id="hero"
       className="relative flex min-h-screen items-center justify-center overflow-hidden"
-      style={{ background: COLORS.bg, padding: "40px 24px" }}
+      style={{ background: COLORS.bg, padding: "80px 24px" }}
     >
       <GridBackground />
 
       <div
-        className="relative z-10 w-full flex items-center justify-between gap-15 hero-layout"
+        className="relative z-10 w-full flex items-center justify-between gap-20 hero-layout"
         style={{ maxWidth: "var(--max-w-content)" }}
       >
         {/* Left: text content */}
-        <div className="hero-slide-up flex-1 max-w-[560px] hero-left">
-          {/* Label */}
+        <div className="hero-slide-up flex-1 max-w-[600px] hero-left">
+          {/* Eyebrow — minimal, editorial */}
           <div
             className="font-[family-name:var(--font-mono)]"
             style={{
               display: "inline-flex", alignItems: "center", gap: "8px",
-              padding: "8px 16px",
-              background: COLORS.accentGlow,
-              border: `1px solid ${COLORS.lineActive}`,
+              padding: "6px 14px",
+              background: "transparent",
+              border: `1px solid ${COLORS.line}`,
               borderRadius: "100px",
-              fontSize: "12px", fontWeight: 600, letterSpacing: "1.2px",
-              color: COLORS.accent, textTransform: "uppercase",
-              marginBottom: "28px",
+              fontSize: "11px", fontWeight: 600, letterSpacing: "1.4px",
+              color: COLORS.textMuted, textTransform: "uppercase",
+              marginBottom: "36px",
             }}
           >
-            <span>⚡</span> B2B Leadgenerering
+            <span style={{ color: COLORS.accent }}>⚡</span> B2B Leadgenerering
           </div>
 
           <h1
-            className="font-[family-name:var(--font-display)]"
+            className="font-[family-name:var(--font-serif)]"
             style={{
-              fontSize: "clamp(2rem, 4.5vw, 52px)",
-              fontWeight: 700, lineHeight: 1.08,
+              fontSize: "clamp(2.5rem, 5.5vw, 68px)",
+              fontWeight: 400, lineHeight: 1.02,
               color: COLORS.text,
-              margin: "0 0 8px 0", letterSpacing: "-1.5px",
+              margin: "0 0 24px 0", letterSpacing: "-0.02em",
             }}
           >
             Automatisera er prospektering – få bokade möten på löpande band.
@@ -352,9 +345,9 @@ export function HeroSection() {
           <p
             className="font-[family-name:var(--font-display)]"
             style={{
-              fontSize: "17px", lineHeight: 1.6,
+              fontSize: "18px", lineHeight: 1.65,
               color: COLORS.textMuted,
-              margin: "20px 0 32px 0", maxWidth: "480px",
+              margin: "24px 0 36px 0", maxWidth: "520px",
             }}
           >
             Vi sköter hela kedjan från prospekt till bokat möte. Ni betalar
@@ -369,9 +362,96 @@ export function HeroSection() {
           </div>
         </div>
 
-        {/* Right: pipeline visualization */}
+        {/* Right: pipeline collage */}
         <div className="shrink-0 hero-right">
+          <div className="relative inline-block">
+          {/* Floating accent top-right — Affärer stängda */}
+          <div
+            className="hero-fade-in absolute z-20"
+            style={{
+              top: "-28px", right: "-36px",
+              display: "inline-flex", alignItems: "center", gap: "10px",
+              padding: "12px 16px",
+              background: "rgba(17, 24, 39, 0.85)",
+              border: `1px solid ${COLORS.line}`,
+              borderRadius: "12px",
+              backdropFilter: "blur(12px)",
+              boxShadow: "0 12px 32px rgba(0,0,0,0.35)",
+              transform: "rotate(2.5deg)",
+              animationDelay: "1.4s",
+            }}
+          >
+            <div
+              style={{
+                width: "28px", height: "28px", borderRadius: "8px",
+                background: "rgba(52, 211, 153, 0.12)",
+                display: "flex", alignItems: "center", justifyContent: "center",
+                fontSize: "14px",
+              }}
+            >
+              ✓
+            </div>
+            <div>
+              <div
+                className="font-[family-name:var(--font-mono)]"
+                style={{
+                  fontSize: "9px", fontWeight: 600, letterSpacing: "1px",
+                  color: COLORS.textMuted, textTransform: "uppercase",
+                  marginBottom: "2px",
+                }}
+              >
+                Affärer stängda
+              </div>
+              <div
+                className="font-[family-name:var(--font-display)]"
+                style={{
+                  fontSize: "16px", fontWeight: 700, color: COLORS.text,
+                  lineHeight: 1,
+                }}
+              >
+                23 / månad
+              </div>
+            </div>
+          </div>
+
+          {/* Main pipeline */}
           <PipelineVisualization />
+
+          {/* Floating accent bottom-left — Live pulse pill */}
+          <div
+            className="hero-fade-in absolute z-20"
+            style={{
+              bottom: "-22px", left: "-44px",
+              display: "inline-flex", alignItems: "center", gap: "10px",
+              padding: "10px 16px",
+              background: "rgba(17, 24, 39, 0.88)",
+              border: `1px solid ${COLORS.line}`,
+              borderRadius: "100px",
+              backdropFilter: "blur(12px)",
+              boxShadow: "0 12px 32px rgba(0,0,0,0.35)",
+              transform: "rotate(-2deg)",
+              animationDelay: "1.6s",
+            }}
+          >
+            <div
+              className="hero-pulse"
+              style={{
+                width: "8px", height: "8px", borderRadius: "50%",
+                background: COLORS.green,
+                boxShadow: `0 0 10px ${COLORS.greenGlow}`,
+              }}
+            />
+            <span
+              className="font-[family-name:var(--font-mono)]"
+              style={{
+                fontSize: "11px", fontWeight: 600, letterSpacing: "1px",
+                color: COLORS.text, textTransform: "uppercase",
+              }}
+            >
+              Pipeline aktiv
+            </span>
+          </div>
+          </div>
         </div>
       </div>
     </section>

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { Montserrat, JetBrains_Mono } from "next/font/google";
+import { Montserrat, JetBrains_Mono, Instrument_Serif } from "next/font/google";
 import localFont from "next/font/local";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -29,6 +29,14 @@ const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   variable: "--font-mono",
+  display: "swap",
+});
+
+const instrumentSerif = Instrument_Serif({
+  subsets: ["latin"],
+  weight: ["400"],
+  style: ["normal", "italic"],
+  variable: "--font-serif",
   display: "swap",
 });
 
@@ -71,7 +79,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="sv" className={`${montserrat.variable} ${larsseit.variable} ${jetbrainsMono.variable}`}>
+    <html lang="sv" className={`${montserrat.variable} ${larsseit.variable} ${jetbrainsMono.variable} ${instrumentSerif.variable}`}>
       <head>
         <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
       </head>
