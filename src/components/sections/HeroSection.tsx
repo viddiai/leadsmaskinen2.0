@@ -335,7 +335,7 @@ export function HeroSection() {
               margin: "0 0 8px 0", letterSpacing: "-1.5px",
             }}
           >
-            Ersättning för resultat,<br />inte timmar.
+            Sales Infrastructure som ersätter prospektering
           </h1>
 
           <h2
@@ -357,9 +357,9 @@ export function HeroSection() {
               margin: "20px 0 32px 0", maxWidth: "480px",
             }}
           >
-            Vi bygger nichade portaler och landningssidor som ökar konvertering,
-            kvalificerar målgruppen och skapar en förutsägbar pipeline. Inga
-            onödiga funktioner, bara det som driver affärer.
+            Vi bygger en komplett lead-motor som automatiserar hela flödet
+            från rätt kontakt → uppvärmt intresse → bokat möte (SQL), med
+            pay-per-lead.
           </p>
 
           <a href="/#packages" className="hero-cta">

@@ -16,10 +16,10 @@ export const NAV_LINKS = [
 ] as const;
 
 export const HERO = {
-  title: "Ersättning för resultat, inte timmar",
+  title: "Sales Infrastructure som ersätter prospektering",
   tagline: "Idealkunder in. Affärer ut.",
   subtitle:
-    "Vi bygger nichade portaler och landningssidor som ökar konvertering, kvalificerar målgruppen och skapar en förutsägbar pipeline. Inga onödiga funktioner, bara det som driver affärer.",
+    "Vi bygger en komplett lead-motor som automatiserar hela flödet från rätt kontakt → uppvärmt intresse → bokat möte (SQL), med pay-per-lead.",
   cta: "Boka konsultation: få fler kvalificerade leads",
 } as const;
 
