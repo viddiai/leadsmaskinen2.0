@@ -362,10 +362,6 @@ export function HeroSection() {
             pay-per-lead.
           </p>
 
-          <a href="/#packages" className="hero-cta">
-            Få din ICP / Persona Workshop — gratis vid köp →
-          </a>
-
           <div className="flex flex-wrap gap-2 mt-7">
             <TrustBadge text="Pay-per-lead" delay={1.0} />
             <TrustBadge text="Inga retainers" delay={1.15} />
