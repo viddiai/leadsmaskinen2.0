@@ -322,38 +322,31 @@ export function HeroSection() {
           <h1
             className="font-[family-name:var(--font-serif)]"
             style={{
-              fontSize: "clamp(2.5rem, 5.5vw, 68px)",
+              fontSize: "clamp(2.75rem, 6vw, 76px)",
               fontWeight: 400, lineHeight: 1.02,
               color: COLORS.text,
-              margin: "0 0 24px 0", letterSpacing: "-0.02em",
+              margin: "0 0 32px 0", letterSpacing: "-0.02em",
             }}
           >
-            Automatisera er prospektering – få bokade möten på löpande band.
+            Sluta prospektera.<br />Börja stänga.
           </h1>
-
-          <h2
-            className="font-[family-name:var(--font-display)]"
-            style={{
-              fontSize: "clamp(1.25rem, 2.2vw, 24px)",
-              fontWeight: 700, lineHeight: 1.35,
-              margin: 0, letterSpacing: "-0.2px",
-            }}
-          >
-            <span className="hero-shimmer">Vi ersätter manuellt listbyggande och kall outreach med intelligent automation. Ni betalar bara för resultat.</span>
-          </h2>
 
           <p
             className="font-[family-name:var(--font-display)]"
             style={{
-              fontSize: "18px", lineHeight: 1.65,
+              fontSize: "19px", lineHeight: 1.6,
               color: COLORS.textMuted,
-              margin: "24px 0 36px 0", maxWidth: "520px",
+              margin: "0 0 40px 0", maxWidth: "540px",
             }}
           >
-            Vi sköter hela kedjan från prospekt till bokat möte. Ni betalar
-            bara för faktiska resultat – vilket gör att ni aldrig kan gå back
-            på samarbetet.
+            Vi bygger er säljmaskin och levererar färdigbokade möten direkt i
+            kalendern. Sänk era möteskostnader och frigör 40 % av säljarnas
+            tid.
           </p>
+
+          <a href="/kalkylator" className="hero-cta">
+            Räkna på er ROI här →
+          </a>
 
           <div className="flex flex-wrap gap-2 mt-7">
             <TrustBadge text="Pay-per-lead" delay={1.0} />
