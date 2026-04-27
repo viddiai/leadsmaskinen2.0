@@ -342,20 +342,7 @@ export function HeroSection() {
             <span className="hero-shimmer">Vi ersätter manuellt listbyggande och kall outreach med intelligent automation. Ni betalar bara för resultat.</span>
           </h2>
 
-          <p
-            className="font-[family-name:var(--font-display)]"
-            style={{
-              fontSize: "18px", lineHeight: 1.65,
-              color: COLORS.textMuted,
-              margin: "24px 0 36px 0", maxWidth: "520px",
-            }}
-          >
-            Vi sköter hela kedjan från prospekt till bokat möte. Ni betalar
-            bara för faktiska resultat – vilket gör att ni aldrig kan gå back
-            på samarbetet.
-          </p>
-
-          <div className="flex flex-wrap gap-2 mt-7">
+          <div className="flex flex-wrap gap-2 mt-10">
             <TrustBadge text="Pay-per-lead" delay={1.0} />
             <TrustBadge text="Inga retainers" delay={1.15} />
             <TrustBadge text="Live inom 3 veckor" delay={1.3} />

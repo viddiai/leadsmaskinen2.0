@@ -18,8 +18,6 @@ export const NAV_LINKS = [
 export const HERO = {
   title: "Automatisera er prospektering – få bokade möten på löpande band.",
   tagline: "Vi ersätter manuellt listbyggande och kall outreach med intelligent automation. Ni betalar bara för resultat.",
-  subtitle:
-    "Vi sköter hela kedjan från prospekt till bokat möte. Ni betalar bara för faktiska resultat – vilket gör att ni aldrig kan gå back på samarbetet.",
   cta: "Boka konsultation: få fler kvalificerade leads",
 } as const;
 
