@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { Check, Clock } from "lucide-react";
 import { SectionWrapper } from "@/components/ui/SectionWrapper";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -92,7 +93,10 @@ export function PackagesSection() {
       </div>
 
       <AnimateOnScroll delay={0.3}>
-        <div className="mx-auto mt-10 max-w-2xl rounded-lg border border-white/10 bg-white/5 p-6 text-center">
+        <Link
+          href="/tjanster/icp-outreach/"
+          className="group mx-auto mt-10 block max-w-2xl rounded-lg border border-white/10 bg-white/5 p-6 text-center transition-colors duration-200 hover:border-orange/60 hover:bg-white/10"
+        >
           <p className="text-body text-white/60">
             <span className="font-semibold text-white">
               Inte redo för ett helt paket?
@@ -100,7 +104,7 @@ export function PackagesSection() {
             Starta med en fristående ICP Persona Workshop – 7 500 kr (avräknas om
             du går vidare).
           </p>
-        </div>
+        </Link>
       </AnimateOnScroll>
     </SectionWrapper>
   );
