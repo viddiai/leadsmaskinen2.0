@@ -120,6 +120,20 @@ s.parentNode.insertBefore(b, s);})(window.lintrk);`,
             src="https://px.ads.linkedin.com/collect/?pid=1789420&fmt=gif"
           />
         </noscript>
+        <Script
+          id="plerdy-tracking"
+          strategy="afterInteractive"
+          data-plerdy_code="1"
+          dangerouslySetInnerHTML={{
+            __html: `var _protocol="https:"==document.location.protocol?"https://":"http://";
+_site_hash_code = "595aae008c4ef319c52a0cb4d494589c",_suid=77254, plerdyScript=document.createElement("script");
+plerdyScript.setAttribute("defer",""),plerdyScript.dataset.plerdymainscript="plerdymainscript",
+plerdyScript.src="https://d.plerdy.com/public/js/click/main.js?v="+Math.random();
+var plerdymainscript=document.querySelector("[data-plerdymainscript='plerdymainscript']");
+plerdymainscript&&plerdymainscript.parentNode.removeChild(plerdymainscript);
+try{document.head.appendChild(plerdyScript)}catch(t){console.log(t,"unable add script tag")}`,
+          }}
+        />
         <StructuredData />
         <Navbar />
         <main>{children}</main>
